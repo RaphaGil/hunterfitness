@@ -41,8 +41,15 @@ export default function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col" aria-label="Hero">
+      {/* Mobile: normal scrolling background */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center md:hidden"
+        style={{ backgroundImage: 'url(/images/hunter2.jpg)' }}
+        aria-hidden
+      />
+      {/* Desktop: fixed background */}
+      <div
+        className="absolute inset-0 hidden bg-cover bg-center md:block"
         style={{
           backgroundImage: 'url(/images/hunter2.jpg)',
           backgroundAttachment: 'fixed',
