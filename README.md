@@ -1,3 +1,11 @@
+# Hunter Fitness
+
+Personal trainer website for Matthew Hunter — Liverpool Street, London.
+
+**Repository:** [https://github.com/RaphaGil/hunterfitness](https://github.com/RaphaGil/hunterfitness)
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
