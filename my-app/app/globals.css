@@ -1,26 +1,185 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --bg-dark: #1a1a1a;
+  --text-on-dark: #fafafa;
+  --text-muted: #a3a3a3;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-on-dark);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Focus visible for better keyboard UX (visible on dark bg) */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Continuous marquee animation */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 30s linear infinite;
+  white-space: nowrap;
+}
+
+/* Scroll-triggered and motion animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes spinCircle {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-circle {
+  animation: spinCircle 10s linear infinite;
+  transform-origin: center center;
+}
+
+/* Subtle hero text float (slower, smaller movement) */
+@keyframes heroTextFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+.animate-hero-float {
+  animation: heroTextFloat 5s ease-in-out infinite;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.7s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.7s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s ease-out forwards;
+}
+
+.animation-delay-100 { animation-delay: 100ms; }
+.animation-delay-200 { animation-delay: 200ms; }
+.animation-delay-300 { animation-delay: 300ms; }
+.animation-delay-400 { animation-delay: 400ms; }
+.animation-delay-500 { animation-delay: 500ms; }
+.animation-delay-700 { animation-delay: 700ms; }
+.animation-delay-1000 { animation-delay: 1000ms; }
+
+/* Scroll-triggered: start invisible, animate when .in-view is added */
+[data-animate] .animate-on-scroll {
+  opacity: 0;
+}
+[data-animate].in-view .animate-on-scroll {
+  animation: fadeInUp 0.7s ease-out forwards;
+}
+[data-animate].in-view .animate-on-scroll-delay-1 { animation-delay: 100ms; }
+[data-animate].in-view .animate-on-scroll-delay-2 { animation-delay: 200ms; }
+[data-animate].in-view .animate-on-scroll-delay-3 { animation-delay: 300ms; }
+[data-animate].in-view .animate-on-scroll-delay-4 { animation-delay: 400ms; }
+[data-animate].in-view .animate-on-scroll-delay-5 { animation-delay: 500ms; }
+
+/* Scroll-triggered: slide in from left (for About text) */
+[data-animate] .animate-from-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+[data-animate].in-view .animate-from-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+/* Scroll-triggered: slide in from right (for About image) */
+@keyframes slideInRightStrong {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+[data-animate] .animate-from-right {
+  opacity: 0;
+  transform: translateX(180px);
+}
+[data-animate].in-view .animate-from-right {
+  animation: slideInRightStrong 0.9s ease-out forwards;
 }
