@@ -30,7 +30,7 @@ export default function About() {
         <div className="md:w-2/3 relative min-h-[400px] md:min-h-[700px] md:h-[80vh] animate-from-right">
           <div
             className="absolute inset-0 bg-cover bg-center bg-fixed animate-float"
-            style={{ backgroundImage: "url('/images/4.jpg')" }}
+            style={{ backgroundImage: "url('/images/10.jpg')" }}
             aria-hidden
           />
           <div className="absolute inset-0 bg-stone-900/40" />

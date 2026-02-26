@@ -55,12 +55,12 @@ export default function Hero() {
       <div
         className="absolute inset-0 hidden bg-cover bg-center md:block"
         style={{
-          backgroundImage: 'url(/images/hunter2.jpg)',
+          backgroundImage: 'url(/images/7.jpg)',
           backgroundAttachment: 'fixed',
         }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-black/40" />
+      <div className="absolute inset-0 bg-black/60" />
 
       <div className="relative z-10 flex flex-1 flex-col justify-center px-6 pt-20 pb-24 md:px-12">
         <div className="mx-auto w-full max-w-2xl text-center">

@@ -1,38 +1,33 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 const services = [
   {
     title: 'Strength',
     description: 'Functional and Integrated Strength and Conditioning',
-    image: '/images/strength.jpg',
   },
   {
     title: 'Core Training',
     description: 'Balance & stability, abdominal and lower back work, and all the muscles of the trunk',
-    image: '/images/12.jpeg',
   },
   {
     title: 'Fat / Weight Loss',
     description: 'Personal approach to weight management with dietary advice for gain or loss as part of a full conditioning program.',
-    image: '/images/14.jpg',
   },
   {
     title: 'Circuit Training',
     description: 'Increase strength and aerobic fitness and burn lots of calories in one workout using multiple exercises',
-    image: '/images/circuit.jpg',
   },
   {
     title: 'Rehabilitation',
     description: 'Working with doctors and physiotherapists to help you recover from medical conditions including lower back pain, high blood pressure, obesity and diabetes.',
-    image: '/images/15.jpg',
   },
   {
     title: 'Sports Specific',
     description: 'Individually designed programmes for marathons, triathlons, football, rugby or combat sports',
-    image: '/images/16.jpg',
   },
 ];
 
@@ -42,41 +37,91 @@ export default function Services() {
   return (
     <AnimateIn>
       <section className="px-6 py-16 md:py-24 lg:py-28 max-w-6xl xl:max-w-7xl mx-auto" aria-labelledby="services-heading">
-        <h1 id="services-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight animate-on-scroll">
-          YOUR FITNESS JOURNEY STARTS HERE
-        </h1>
-        <p className="mt-2 text-stone-300 max-w-xl lg:text-lg font-thin animate-on-scroll animate-on-scroll-delay-1">Browse our services below.</p>
+        <header className="text-center mb-14 md:mb-16 lg:mb-20">
+          <p className="text-[#facc15] text-sm font-semibold tracking-widest uppercase animate-on-scroll">What we offer</p>
+          <h1 id="services-heading" className="mt-2 text-3xl md:text-4xl lg:text-5xl font-bold text-white tracking-tight animate-on-scroll animate-on-scroll-delay-1">
+            YOUR FITNESS JOURNEY STARTS HERE
+          </h1>
+          <div className="mt-4 w-16 h-1 bg-[#facc15] mx-auto rounded-full animate-on-scroll animate-on-scroll-delay-2" aria-hidden />
+          <p className="mt-4 text-stone-400 max-w-xl mx-auto lg:text-lg font-thin animate-on-scroll animate-on-scroll-delay-2">
+            Browse our services below.
+          </p>
+        </header>
 
-        <div className="mt-12 md:mt-16 lg:mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-          {services.map((service, index) => (
-            <article
-              key={service.title}
-              className={`group relative flex flex-col overflow-hidden rounded-lg border border-stone-700/80 bg-stone-900/60 hover:border-[#facc15]/40 transition-all duration-300 hover:shadow-xl hover:shadow-black/20 animate-on-scroll ${delayClasses[index]}`}
-            >
-              {/* Image */}
-              <div className="relative aspect-4/3 overflow-hidden">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-linear-to-t from-stone-900 via-stone-900/40 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <h2 className="text-xl md:text-2xl font-bold text-white drop-shadow-lg">{service.title}</h2>
-                  <div className="w-10 h-0.5 bg-[#facc15] mt-2" aria-hidden />
+        <div className="flex flex-col lg:flex-row gap-8 lg:gap-10 xl:gap-12">
+          {/* Image on the left */}
+          <div className="order-1 flex items-center justify-center lg:justify-start px-4 lg:px-0 shrink-0 relative">
+            {/* Yellow square behind image - minimalist */}
+            <div
+              className="absolute -top-3 -right-3 lg:-top-4 lg:-right-4 w-full h-full min-h-[280px] lg:min-h-[560px] bg-[#facc15]/10 rounded-md animate-on-scroll z-0"
+              style={{ transform: 'rotate(3deg)' }}
+              aria-hidden
+            />
+            <div className="relative w-full aspect-4/3 lg:w-[420px] xl:w-[500px] lg:aspect-auto lg:min-h-[560px] rounded-md overflow-hidden animate-on-scroll ring-2 ring-stone-700/60 ring-offset-4 ring-offset-[#1a1a1a] shadow-2xl shadow-black/40 z-10">
+              <Image
+                src="/images/4.jpg"
+                alt="Hunter Fitness training"
+                fill
+                sizes="(max-width: 1024px) 100vw, 500px"
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-stone-900/60 via-transparent to-transparent pointer-events-none" aria-hidden />
+            </div>
+          </div>
+
+          {/* Topics on the right - two columns */}
+          <div className="order-2 flex-1 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="space-y-6">
+              {services.slice(0, 3).map((service, index) => (
+              <article
+                key={service.title}
+                className={`group rounded-md border border-stone-700/80 bg-stone-900/50 p-6 md:p-7 hover:border-[#facc15]/50 hover:bg-stone-900/70 hover:shadow-lg hover:shadow-black/20 transition-all duration-300 animate-on-scroll ${delayClasses[index]}`}
+              >
+                <div className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-[#facc15]/10 text-[#facc15] shrink-0 font-bold text-sm">
+                    {index + 1}
+                  </span>
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-[#facc15] transition-colors duration-200">{service.title}</h2>
+                    <div className="w-12 h-0.5 bg-[#facc15]/60 mb-4" aria-hidden />
+                    <p className="text-stone-300 text-sm md:text-base leading-relaxed">{service.description}</p>
+                  </div>
                 </div>
-              </div>
+              </article>
+            ))}
+            </div>
+            <div className="space-y-6">
+            {services.slice(3, 6).map((service, index) => (
+              <article
+                key={service.title}
+                className={`group rounded-md border border-stone-700/80 bg-stone-900/50 p-6 md:p-7 hover:border-[#facc15]/50 hover:bg-stone-900/70 hover:shadow-lg hover:shadow-black/20 transition-all duration-300 animate-on-scroll ${delayClasses[index + 3]}`}
+              >
+                <div className="flex items-start gap-4">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-md bg-[#facc15]/10 text-[#facc15] shrink-0 font-bold text-sm">
+                    {index + 4}
+                  </span>
+                  <div>
+                    <h2 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-[#facc15] transition-colors duration-200">{service.title}</h2>
+                    <div className="w-12 h-0.5 bg-[#facc15]/60 mb-4" aria-hidden />
+                    <p className="text-stone-300 text-sm md:text-base leading-relaxed">{service.description}</p>
+                  </div>
+                </div>
+              </article>
+            ))}
+            </div>
+          </div>
+        </div>
 
-              {/* Content */}
-              <div className="flex flex-col flex-1 p-5 md:p-6">
-                <p className="text-stone-300 text-sm md:text-base leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            </article>
-          ))}
+        <div className="mt-14 md:mt-16 text-center animate-on-scroll animate-on-scroll-delay-5">
+          <Link
+            href="#contact"
+            className="inline-flex items-center gap-2 px-8 py-4 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-widest hover:bg-[#fde047] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#facc15] rounded-md"
+          >
+            Book a consultation
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </Link>
         </div>
       </section>
     </AnimateIn>

@@ -6,7 +6,7 @@ const plans = [
     title: 'One-on-one',
     description: 'Personal attention',
     paragraph: 'I offer a wide range of plans to suit most people\'s needs. Our trainers will tailor a training program to suit your individual requirements, either on a one-on-one basis, or a small group session, if you prefer to train with friends.',
-    img: '/images/oneonone.jpg',
+    img: '/images/3.jpg',
   },
   {
     title: 'Small groups',

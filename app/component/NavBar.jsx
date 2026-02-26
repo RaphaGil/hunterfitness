@@ -5,18 +5,19 @@ import Image from "next/image";
 import Link from "next/link";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "#about-heading", label: "About" },
-  { href: "#services-heading", label: "Services" },
-  { href: "#studio", label: "Studio" },
-  { href: "#benefits", label: "Benefits" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/", label: "Home", id: null },
+  { href: "#about-heading", label: "About", id: "about-heading" },
+  { href: "#services-heading", label: "Services", id: "services-heading" },
+  { href: "#studio", label: "Studio", id: "studio" },
+  { href: "#benefits", label: "Benefits", id: "benefits" },
+  { href: "#faq", label: "FAQ", id: "faq" },
+  { href: "#contact", label: "Contact", id: "contact" },
 ];
 
 export default function NavBar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [activeId, setActiveId] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 50);
@@ -25,12 +26,31 @@ export default function NavBar() {
   }, []);
 
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveId(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-20% 0px -70% 0px", threshold: 0 }
+    );
+    links.forEach(({ id }) => {
+      const el = id ? document.getElementById(id) : null;
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
     if (menuOpen) document.body.style.overflow = "hidden";
     else document.body.style.overflow = "";
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  const linkClass = "text-white hover:text-[#facc15] transition-colors";
+  const linkClass = (id) =>
+    `text-white hover:text-[#facc15] transition-colors duration-200 ${activeId === id ? "text-[#facc15] font-medium" : ""}`;
   const iconClass = "w-7 h-7 text-white/80 hover:text-[#facc15] transition";
 
   return (
@@ -55,9 +75,9 @@ export default function NavBar() {
         {/* Desktop nav */}
         <nav aria-label="Main" className="hidden md:block">
           <ul className="flex gap-6 list-none text-sm tracking-wide font-light">
-            {links.map(({ href, label }) => (
+            {links.map(({ href, label, id }) => (
               <li key={href}>
-                <Link href={href} className={linkClass}>{label}</Link>
+                <Link href={href} className={linkClass(id)}>{label}</Link>
               </li>
             ))}
           </ul>
@@ -80,15 +100,15 @@ export default function NavBar() {
         <button
           type="button"
           onClick={() => setMenuOpen((o) => !o)}
-          className="md:hidden p-2 -mr-2 text-white/90 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
+          className="md:hidden p-2 -mr-2 text-white/90 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm touch-manipulation"
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
           aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
           {menuOpen ? (
-            <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth={1.25} viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           ) : (
-            <svg className="w-12 h-12" fill="none" stroke="currentColor" strokeWidth={1.25} viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+            <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24" aria-hidden><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
           )}
         </button>
       </header>
@@ -105,11 +125,11 @@ export default function NavBar() {
         <div className="flex flex-col pt-20 px-6 pb-8" onClick={(e) => e.stopPropagation()}>
           <nav aria-label="Main">
             <ul className="flex flex-col gap-1 list-none">
-              {links.map(({ href, label }) => (
+              {links.map(({ href, label, id }) => (
                 <li key={href}>
                   <Link
                     href={href}
-                    className="block py-3 text-lg text-white/90 hover:text-white transition-colors border-b border-white/5"
+                    className={`block py-4 text-lg transition-colors border-b border-white/5 touch-manipulation ${activeId === id ? "text-[#facc15] font-medium" : "text-white/90 hover:text-white"}`}
                     onClick={() => setMenuOpen(false)}
                   >
                     {label}
