@@ -61,7 +61,7 @@ export default function Review() {
             <div className="animate-on-scroll min-h-[200px] md:min-h-[240px]">
               <blockquote
                 key={reviews[activeIndex].name + activeIndex}
-                className="flex flex-col rounded-sm border border-stone-700 border-l-4 border-l-[#3b82f6] bg-stone-900/80 p-6 md:p-8 hover:border-[#3b82f6]/50 transition-colors duration-300"
+                className="flex flex-col rounded-sm border border-stone-700 border-l-4 border-l-[#facc15] bg-stone-900/80 p-6 md:p-8 hover:border-[#facc15]/50 transition-colors duration-300"
               >
                 <p className="text-stone-200 text-base md:text-lg leading-relaxed flex-1">
                   &ldquo;{reviews[activeIndex].quote}&rdquo;
@@ -70,7 +70,7 @@ export default function Review() {
                   <cite className="not-italic font-semibold text-white">
                     {reviews[activeIndex].name}
                   </cite>
-                  <p className="text-[#3b82f6]/90 text-sm mt-0.5">{reviews[activeIndex].detail}</p>
+                  <p className="text-[#facc15]/90 text-sm mt-0.5">{reviews[activeIndex].detail}</p>
                 </footer>
               </blockquote>
             </div>
@@ -80,7 +80,7 @@ export default function Review() {
                   key={index}
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'w-6 bg-[#3b82f6]' : 'w-2 bg-stone-600'}`}
+                  className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'w-6 bg-[#facc15]' : 'w-2 bg-stone-600'}`}
                   aria-label={`Go to review ${index + 1}`}
                   aria-current={index === activeIndex ? 'true' : undefined}
                 />

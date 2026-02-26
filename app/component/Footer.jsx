@@ -1,6 +1,6 @@
 export default function Footer() {
   const year = new Date().getFullYear();
-  const iconClass = "w-5 h-5 text-stone-400 hover:text-[#3b82f6] transition";
+  const iconClass = "w-5 h-5 text-stone-400 hover:text-[#facc15] transition";
 
   return (
     <footer className="border-t border-stone-800 py-8 px-6 bg-[#1a1a1a]" role="contentinfo">
@@ -46,7 +46,7 @@ export default function Footer() {
             href="https://raphagil.github.io/RaphaelaPortfolio/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-stone-300 hover:text-[#3b82f6] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded-sm"
+            className="text-stone-300 hover:text-[#facc15] transition focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded-sm"
           >
             Raphaela Gil
           </a>

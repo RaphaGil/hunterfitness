@@ -6,7 +6,7 @@ export default function About() {
       <section className="flex flex-col md:flex-row mt-8 md:mt-16" aria-labelledby="about-heading">
         <div className="mt-4 md:w-1/2 flex items-center justify-center p-6 md:p-12">
           <div className="space-y-4 max-w-xl animate-on-scroll">
-          <h3 id="about-heading" className="text-sm font-semibold tracking-widest text-[#3b82f6] uppercase animate-hero-float">
+          <h3 id="about-heading" className="text-sm font-semibold tracking-widest text-[#facc15] uppercase animate-hero-float">
             ABOUT ME
           </h3>
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white animate-hero-float" style={{ animationDelay: '0.3s' }}>Matthew Hunter</h2>

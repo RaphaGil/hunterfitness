@@ -47,17 +47,17 @@ export default function Information() {
         <div ref={sinceRef} className="animate-fade-in-up">
           <p className="text-3xl md:text-5xl font-light text-white tabular-nums">{sinceCount}</p>
           <p className="mt-1 text-md uppercase tracking-widest text-stone-500">Since</p>
-          <p className="mt-1.5 text-[14px] text-[#3b82f6] tracking-wide">Trusted in fitness</p>
+          <p className="mt-1.5 text-[14px] text-[#facc15] tracking-wide">Trusted in fitness</p>
         </div>
         <div ref={yearsRef} className="animate-fade-in-up" style={{ animationDelay: '0.1s' }}>
           <p className="text-3xl md:text-5xl font-light text-white tabular-nums">{yearsCount}</p>
           <p className="mt-1 text-md uppercase tracking-widest text-stone-500">Years</p>
-          <p className="mt-1.5 text-[14px] text-[#3b82f6] tracking-wide">Expert coaching</p>
+          <p className="mt-1.5 text-[14px] text-[#facc15] tracking-wide">Expert coaching</p>
         </div>
         <div ref={clientsRef} className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           <p className="text-3xl md:text-5xl font-light text-white tabular-nums">{clientsCount.toLocaleString()}</p>
           <p className="mt-1 text-md uppercase tracking-widest text-stone-500">+ Clients</p>
-          <p className="mt-1.5 text-[14px] text-[#3b82f6] tracking-wide">Results delivered</p>
+          <p className="mt-1.5 text-[14px] text-[#facc15] tracking-wide">Results delivered</p>
         </div>
       </div>
     </section>

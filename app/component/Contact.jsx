@@ -84,7 +84,7 @@ export default function Contact() {
   };
 
   const inputClass =
-    'w-full bg-stone-900 border border-stone-600 rounded-sm px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#3b82f6] focus:border-[#3b82f6] transition-shadow';
+    'w-full bg-stone-900 border border-stone-600 rounded-sm px-4 py-3 text-white placeholder-stone-500 focus:outline-none focus:ring-2 focus:ring-[#facc15] focus:border-[#facc15] transition-shadow';
 
   return (
     <AnimateIn>
@@ -103,7 +103,7 @@ export default function Contact() {
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-stone-200 mb-1.5">
-                  Name <span className="text-[#3b82f6]">*</span>
+                  Name <span className="text-[#facc15]">*</span>
                 </label>
                 <input
                   id="name"
@@ -119,7 +119,7 @@ export default function Contact() {
               </div>
               <div>
                 <label htmlFor="email" className="block text-sm font-semibold text-stone-200 mb-1.5">
-                  Email <span className="text-[#3b82f6]">*</span>
+                  Email <span className="text-[#facc15]">*</span>
                 </label>
                 <input
                   id="email"
@@ -150,7 +150,7 @@ export default function Contact() {
               </div>
               <div>
                 <label htmlFor="message" className="block text-sm font-semibold text-stone-200 mb-1.5">
-                  Message <span className="text-[#3b82f6]">*</span>
+                  Message <span className="text-[#facc15]">*</span>
                 </label>
                 <textarea
                   id="message"
@@ -164,14 +164,14 @@ export default function Contact() {
                 />
               </div>
               {submitted && (
-                <p className="text-[#3b82f6] text-sm font-medium flex items-center gap-2" role="status">
-                  <span className="inline-block w-2 h-2 rounded-sm bg-[#3b82f6] animate-pulse" aria-hidden />
+                <p className="text-[#facc15] text-sm font-medium flex items-center gap-2" role="status">
+                  <span className="inline-block w-2 h-2 rounded-sm bg-[#facc15] animate-pulse" aria-hidden />
                   Thanks! We&apos;ll get back to you soon.
                 </p>
               )}
               <button
                 type="submit"
-                className="inline-block border-b border-white pb-1 text-white font-medium transition-colors duration-200 hover:border-[#3b82f6] hover:text-[#3b82f6] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]"
+                className="inline-block border-b border-white pb-1 text-white font-medium transition-colors duration-200 hover:border-[#facc15] hover:text-[#facc15] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]"
               >
                 Send message
               </button>
@@ -184,7 +184,7 @@ export default function Contact() {
               {contact.filter((item) => item.label !== 'Address').map((item) => {
                 const content = (
                   <>
-                    <span className="text-[#3b82f6] shrink-0 mt-0.5" aria-hidden>
+                    <span className="text-[#facc15] shrink-0 mt-0.5" aria-hidden>
                       {item.icon}
                     </span>
                     <div className="min-w-0">
@@ -205,7 +205,7 @@ export default function Contact() {
                         href={item.href}
                         target={item.href.startsWith('http') ? '_blank' : undefined}
                         rel={item.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-                        className="flex items-start gap-4 py-5 text-left text-stone-100 hover:text-[#3b82f6] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded-sm"
+                        className="flex items-start gap-4 py-5 text-left text-stone-100 hover:text-[#facc15] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded-sm"
                       >
                         {content}
                       </a>
@@ -223,11 +223,11 @@ export default function Contact() {
                 href="https://www.google.com/maps?q=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block group rounded-sm overflow-hidden  hover:border-[#3b82f6]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]"
+                className="block group rounded-sm overflow-hidden  hover:border-[#facc15]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]"
                 aria-label="View Hunter Fitness on Google Maps"
               >
                 <div className="flex items-start gap-4 py-3 pb-4">
-                  <span className="text-[#3b82f6] shrink-0 mt-0.5" aria-hidden>
+                  <span className="text-[#facc15] shrink-0 mt-0.5" aria-hidden>
                     {icons.address}
                   </span>
                   <div className="min-w-0">

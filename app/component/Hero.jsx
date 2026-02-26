@@ -41,10 +41,14 @@ export default function Hero() {
 
   return (
     <section className="relative w-full min-h-screen flex flex-col" aria-label="Hero">
-      {/* Mobile: normal scrolling background */}
+      {/* Mobile: normal scrolling background, centered */}
       <div
-        className="absolute inset-0 bg-cover bg-center md:hidden"
-        style={{ backgroundImage: 'url(/images/hunter2.jpg)' }}
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
+        style={{
+          backgroundImage: 'url(/images/hunter2.jpg)',
+          backgroundPosition: 'center center',
+          backgroundSize: 'cover',
+        }}
         aria-hidden
       />
       {/* Desktop: fixed background */}
@@ -64,16 +68,16 @@ export default function Hero() {
             PERSONALIZED FITNESS FOR
           </h1>
           <p
-            className="mt-4 text-[#3b82f6] text-2xl sm:text-3xl md:text-4xl font-extralight min-h-[1.2em] animate-fade-in-up"
+            className="mt-4 text-[#facc15] text-2xl sm:text-3xl md:text-4xl font-extralight min-h-[1.2em] animate-fade-in-up"
             style={{ animationDelay: '0.4s' }}
           >
             {typedText}
-            <span className="inline-block w-0.5 h-[0.9em] bg-[#3b82f6] ml-0.5 align-middle animate-pulse" aria-hidden />
+            <span className="inline-block w-0.5 h-[0.9em] bg-[#facc15] ml-0.5 align-middle animate-pulse" aria-hidden />
           </p>
           <p className="mt-10 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <Link
               href="#contact"
-              className="text-white border-b  text-sm tracking-widest uppercase hover:text-[#3b82f6] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+              className="text-white border-b  text-sm tracking-widest uppercase hover:text-[#facc15] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Start here
             </Link>
@@ -97,7 +101,7 @@ export default function Hero() {
           href={MAPS_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/70 text-md tracking-wide hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          className="text-white/80 text-md tracking-wide hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
           Andaz Hotel · 40 Liverpool St · EC2M 7QN
         </a>

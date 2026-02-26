@@ -45,7 +45,7 @@ export default function Images() {
           </p>
           <Link
             href="/contact"
-            className="inline-block border-b border-white pb-1 text-white transition-colors duration-200 hover:border-[#3b82f6] hover:text-[#3b82f6] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#3b82f6] focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
+            className="inline-block border-b border-white pb-1 text-white transition-colors duration-200 hover:border-[#facc15] hover:text-[#facc15] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
           >
             LET&apos;S START
           </Link>

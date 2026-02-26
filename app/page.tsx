@@ -3,6 +3,7 @@ import NavBar from '@/component/NavBar';
 import Banner from '@/component/Banner';
 import About from '@/component/About';
 import Information from '@/component/Information';
+import Studio from '@/component/Studio';
 import Target from '@/component/Target';
 import Images from '@/component/Images';
 import Services from '@/component/Services';
@@ -20,6 +21,7 @@ export default function HomePage() {
       <Information />
       <About />
       <Banner />
+      <Studio />
       <Target />
       <Images />
       <Services />

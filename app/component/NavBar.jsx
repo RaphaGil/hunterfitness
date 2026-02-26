@@ -6,10 +6,10 @@ import Link from "next/link";
 
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/testimonials", label: "Studio" },
-  { href: "/contact", label: "Contact" },
+  { href: "#about-heading", label: "About" },
+  { href: "#services-heading", label: "Services" },
+  { href: "#studio", label: "Studio" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function NavBar() {
@@ -28,8 +28,8 @@ export default function NavBar() {
     return () => { document.body.style.overflow = ""; };
   }, [menuOpen]);
 
-  const linkClass = "text-white hover:text-[#3b82f6] transition-colors";
-  const iconClass = "w-7 h-7 text-white/80 hover:text-[#3b82f6] transition";
+  const linkClass = "text-white hover:text-[#facc15] transition-colors";
+  const iconClass = "w-7 h-7 text-white/80 hover:text-[#facc15] transition";
 
   return (
     <>

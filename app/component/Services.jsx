@@ -75,7 +75,7 @@ export default function Services() {
                   <h2 className="hidden md:block text-2xl md:text-3xl lg:text-4xl font-bold text-white tracking-tight mb-3 lg:mb-4">
                     {service.title}
                   </h2>
-                  <div className="hidden md:block w-12 lg:w-16 h-0.5 bg-[#3b82f6] mb-4 lg:mb-5" aria-hidden />
+                  <div className="hidden md:block w-12 lg:w-16 h-0.5 bg-[#facc15] mb-4 lg:mb-5" aria-hidden />
                   <p className="text-stone-300 text-sm md:text-base lg:text-lg leading-relaxed">
                     {service.description}
                   </p>

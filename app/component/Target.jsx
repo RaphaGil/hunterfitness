@@ -41,7 +41,7 @@ export default function Target() {
               <article
                 key={plan.title}
                 role="listitem"
-                className={`group relative bg-stone-900 rounded-sm border border-stone-700 hover:border-[#3b82f6]/60 transition-all duration-300 flex flex-col overflow-hidden focus-within:ring-2 focus-within:ring-[#3b82f6] focus-within:ring-offset-2 focus-within:ring-offset-[#1a1a1a] animate-on-scroll ${['animate-on-scroll-delay-1', 'animate-on-scroll-delay-2', 'animate-on-scroll-delay-3'][index]}`}
+                className={`group relative bg-stone-900 rounded-sm border border-stone-700 hover:border-[#facc15]/60 transition-all duration-300 flex flex-col overflow-hidden focus-within:ring-2 focus-within:ring-[#facc15] focus-within:ring-offset-2 focus-within:ring-offset-[#1a1a1a] animate-on-scroll ${['animate-on-scroll-delay-1', 'animate-on-scroll-delay-2', 'animate-on-scroll-delay-3'][index]}`}
             >
               <div className="relative aspect-4/3 overflow-hidden">
                 <Image
@@ -53,7 +53,7 @@ export default function Target() {
                 />
                 <div className="absolute inset-0 bg-linear-to-t from-stone-900/90 via-stone-900/20 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5">
-                  <span className="text-xs font-semibold tracking-widest text-[#3b82f6] uppercase opacity-90">
+                  <span className="text-xs font-semibold tracking-widest text-[#facc15] uppercase opacity-90">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-1">
