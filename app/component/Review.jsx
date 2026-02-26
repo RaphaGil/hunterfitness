@@ -32,16 +32,28 @@ const reviews = [
 ];
 
 const ROTATE_INTERVAL_MS = 7000;
+const REVIEWS_PER_PAGE = 2;
+const pageCount = Math.ceil(reviews.length / REVIEWS_PER_PAGE);
+
+function getReviewIndices(pageIndex) {
+  const start = pageIndex * REVIEWS_PER_PAGE;
+  return [
+    reviews[start],
+    reviews[(start + 1) % reviews.length],
+  ];
+}
 
 export default function Review() {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activePage, setActivePage] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => {
-      setActiveIndex((i) => (i + 1) % reviews.length);
+      setActivePage((p) => (p + 1) % pageCount);
     }, ROTATE_INTERVAL_MS);
     return () => clearInterval(id);
   }, []);
+
+  const displayedReviews = getReviewIndices(activePage);
 
   return (
     <AnimateIn>
@@ -56,33 +68,35 @@ export default function Review() {
             </p>
           </header>
 
-          {/* One review at a time, auto-rotating */}
-          <div className="max-w-3xl mx-auto">
-            <div className="animate-on-scroll min-h-[200px] md:min-h-[240px]">
-              <blockquote
-                key={reviews[activeIndex].name + activeIndex}
-                className="flex flex-col rounded-sm border border-stone-700 border-l-4 border-l-[#facc15] bg-stone-900/80 p-6 md:p-8 hover:border-[#facc15]/50 transition-colors duration-300"
-              >
-                <p className="text-stone-200 text-base md:text-lg leading-relaxed flex-1">
-                  &ldquo;{reviews[activeIndex].quote}&rdquo;
-                </p>
-                <footer className="mt-6 pt-4 border-t border-stone-700">
-                  <cite className="not-italic font-semibold text-white">
-                    {reviews[activeIndex].name}
-                  </cite>
-                  <p className="text-[#facc15]/90 text-sm mt-0.5">{reviews[activeIndex].detail}</p>
-                </footer>
-              </blockquote>
+          {/* Two reviews at a time, auto-rotating */}
+          <div className="animate-on-scroll">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+              {displayedReviews.map((review, i) => (
+                <blockquote
+                  key={review.name + activePage + i}
+                  className="flex flex-col rounded-sm border border-stone-700 border-l-4 border-l-[#facc15] bg-stone-900/80 p-6 md:p-8 hover:border-[#facc15]/50 transition-colors duration-300 min-h-[200px] md:min-h-[240px]"
+                >
+                  <p className="text-stone-200 text-base md:text-lg leading-relaxed flex-1">
+                    &ldquo;{review.quote}&rdquo;
+                  </p>
+                  <footer className="mt-6 pt-4 border-t border-stone-700">
+                    <cite className="not-italic font-semibold text-white">
+                      {review.name}
+                    </cite>
+                    <p className="text-[#facc15]/90 text-sm mt-0.5">{review.detail}</p>
+                  </footer>
+                </blockquote>
+              ))}
             </div>
             <div className="flex justify-center gap-2 mt-6" aria-label="Review progress">
-              {reviews.map((_, index) => (
+              {Array.from({ length: pageCount }).map((_, index) => (
                 <button
                   key={index}
                   type="button"
-                  onClick={() => setActiveIndex(index)}
-                  className={`h-2 rounded-full transition-all duration-300 ${index === activeIndex ? 'w-6 bg-[#facc15]' : 'w-2 bg-stone-600'}`}
-                  aria-label={`Go to review ${index + 1}`}
-                  aria-current={index === activeIndex ? 'true' : undefined}
+                  onClick={() => setActivePage(index)}
+                  className={`h-2 rounded-full transition-all duration-300 ${index === activePage ? 'w-6 bg-[#facc15]' : 'w-2 bg-stone-600'}`}
+                  aria-label={`Go to reviews ${index + 1}`}
+                  aria-current={index === activePage ? 'true' : undefined}
                 />
               ))}
             </div>

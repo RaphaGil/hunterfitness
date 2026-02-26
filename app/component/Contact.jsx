@@ -42,13 +42,13 @@ export default function Contact() {
   const contact = [
     {
       label: 'Email',
-      value: 'hello@hunterfitness.com',
-      href: 'mailto:hello@hunterfitness.com',
+      value: 'matt@hunterfitness.co.uk',
+      href: 'mailto:matt@hunterfitness.co.uk',
       icon: icons.email,
     },
     {
       label: 'Phone',
-      value: '+44 20 1234 5678',
+      value: '+44 20 1234 5678 / +44 7789 991 975',
       href: 'tel:+442012345678',
       icon: icons.phone,
     },
@@ -60,16 +60,11 @@ export default function Contact() {
     },
     {
       label: 'Work time',
-      value: 'Mon–Fri 6:00 – 22:00 · Sat–Sun 8:00 – 18:00',
+      value: 'Mon–Fri 7:00 – 19:30 ',
       href: null,
       icon: icons.clock,
     },
-    {
-      label: 'Twitter',
-      value: '@HunterFitness',
-      href: 'https://twitter.com/HunterFitness',
-      icon: icons.twitter,
-    },
+  
   ];
 
   const handleChange = (e) => {

@@ -44,7 +44,7 @@ export default function Images() {
             Call Hunter Fitness today & begin the change you deserve.
           </p>
           <Link
-            href="/contact"
+            href="#contact"
             className="inline-block border-b border-white pb-1 text-white transition-colors duration-200 hover:border-[#facc15] hover:text-[#facc15] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
           >
             LET&apos;S START
