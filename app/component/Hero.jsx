@@ -45,7 +45,7 @@ export default function Hero() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
         style={{
-          backgroundImage: 'url(/images/hunter2.jpg)',
+          backgroundImage: 'url(/images/7.jpg)',
           backgroundPosition: 'center center',
           backgroundSize: 'cover',
         }}

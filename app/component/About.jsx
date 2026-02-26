@@ -27,9 +27,9 @@ export default function About() {
           </div>
         </div>
 
-        <div className="md:w-2/3 relative min-h-[400px] md:min-h-[700px] md:h-[80vh] animate-from-right">
+        <div className="md:w-2/3 relative w-full min-h-[450px] aspect-3/4 md:aspect-auto md:min-h-[700px] md:h-[80vh] animate-from-right">
           <div
-            className="absolute inset-0 bg-cover bg-center bg-fixed animate-float"
+            className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-fixed animate-float"
             style={{ backgroundImage: "url('/images/10.jpg')" }}
             aria-hidden
           />
