@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import AnimateIn from './AnimateIn';
 
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN";
@@ -24,6 +25,17 @@ export default function Studio() {
             </p>
           </header>
 
+          <div className="relative w-full aspect-[16/10] md:aspect-[21/9] rounded-sm overflow-hidden mb-12 md:mb-16 animate-on-scroll">
+            <Image
+              src="/images/studio.jpg"
+              alt="Hunter Fitness studio at Andaz Hotel Health Club, Liverpool Street London"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 896px"
+              priority={false}
+            />
+          </div>
+
           <div className="space-y-10 md:space-y-12 animate-on-scroll animate-on-scroll-delay-1">
             {/* Location */}
             <div className="rounded-sm border border-stone-700 bg-stone-900/80 p-6 md:p-8">
@@ -38,9 +50,7 @@ export default function Studio() {
               >
                 Andaz Hotel · 40 Liverpool Street · London EC2M 7QN
               </a>
-              <p className="mt-2 text-stone-400 text-sm">
-                The Andaz Hotel Health Club, Liverpool Street
-              </p>
+         
             </div>
 
             {/* Facilities */}
