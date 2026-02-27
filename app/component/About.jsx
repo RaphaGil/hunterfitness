@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import AnimateIn from './AnimateIn';
 
 export default function About() {
@@ -27,10 +28,13 @@ export default function About() {
           </div>
         </div>
 
-        <div className="md:w-2/3 relative w-full min-h-[450px] aspect-3/4 md:aspect-auto md:min-h-[700px] md:h-[80vh] animate-from-right">
-          <div
-            className="absolute inset-0 bg-contain md:bg-cover bg-center bg-no-repeat md:bg-fixed animate-float"
-            style={{ backgroundImage: "url('/images/10.jpg')" }}
+        <div className="md:w-2/3 relative w-full aspect-3/4 sm:aspect-4/5 md:aspect-auto md:min-h-[700px] md:h-[80vh] overflow-hidden animate-from-right">
+          <Image
+            src="/images/10.jpg"
+            alt=""
+            fill
+            sizes="(max-width: 768px) 100vw, 66vw"
+            className="object-cover object-center md:animate-float"
             aria-hidden
           />
           <div className="absolute inset-0 bg-stone-900/40" />

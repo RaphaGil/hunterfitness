@@ -103,12 +103,7 @@ const openingHoursSpecification = [
     opens: "06:00",
     closes: "22:00",
   },
-  {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Saturday", "Sunday"],
-    opens: "08:00",
-    closes: "18:00",
-  },
+
 ];
 
 const jsonLdSchemas = [
