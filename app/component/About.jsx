@@ -34,7 +34,7 @@ export default function About() {
             alt=""
             fill
             sizes="(max-width: 768px) 100vw, 66vw"
-            className="object-cover object-center md:animate-float"
+            className="object-contain object-center md:animate-float"
             aria-hidden
           />
           <div className="absolute inset-0 bg-stone-900/40" />
