@@ -16,6 +16,9 @@ const siteUrl = "https://hunterfitness.co.uk";
 const ogImage = `${siteUrl}/images/matt2_960x540.jpg`;
 
 export const metadata: Metadata = {
+  icons: {
+    icon: '/images/layout.jpg',  // or .png
+  },
   metadataBase: new URL(siteUrl),
   title: {
     default: "Personal Trainer in the City of Liverpool Street | Hunter Fitness",
