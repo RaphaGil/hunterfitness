@@ -28,10 +28,10 @@ export default function Target() {
       <section className="py-20 md:py-28 px-6 bg-stone-950/50" aria-labelledby="target-heading">
         <div className="max-w-6xl mx-auto">
           <header className="text-center mb-16 animate-on-scroll">
-            <h2 id="target-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+            <h2 id="target-heading" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
             TARGETED INDIVIDUAL PLANS
           </h2>
-          <p className="mt-4 text-whitetext-lg md:text-xl max-w-2xl mx-auto font-thin">
+          <p className="mt-4 text-stone-400 text-lg md:text-xl max-w-2xl mx-auto font-thin">
             Tailored programs that fit your life
           </p>
         </header>
@@ -41,7 +41,7 @@ export default function Target() {
               <article
                 key={plan.title}
                 role="listitem"
-                className={`group relative bg-stone-900 rounded-sm border border-stone-700 hover:border-[#facc15]/60 transition-all duration-300 flex flex-col overflow-hidden focus-within:ring-2 focus-within:ring-[#facc15] focus-within:ring-offset-2 focus-within:ring-offset-[#1a1a1a] animate-on-scroll ${['animate-on-scroll-delay-1', 'animate-on-scroll-delay-2', 'animate-on-scroll-delay-3'][index]}`}
+                className={`group relative bg-stone-900/90 rounded-lg border border-stone-700/80 hover:border-[#facc15]/50 hover:shadow-xl hover:shadow-[#facc15]/5 transition-all duration-300 flex flex-col overflow-hidden focus-within:ring-2 focus-within:ring-[#facc15] focus-within:ring-offset-2 focus-within:ring-offset-[#1a1a1a] animate-on-scroll shadow-lg ${['animate-on-scroll-delay-1', 'animate-on-scroll-delay-2', 'animate-on-scroll-delay-3'][index]}`}
             >
               <div className="relative aspect-4/3 overflow-hidden">
                 <Image
@@ -56,7 +56,7 @@ export default function Target() {
                   <span className="text-xs font-semibold tracking-widest text-[#facc15] uppercase opacity-90">
                     {String(index + 1).padStart(2, '0')}
                   </span>
-                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-white mt-1">
+                  <h3 className="font-display text-xl md:text-2xl font-bold tracking-tight text-white mt-1">
                     {plan.title}
                   </h3>
                   <p className="text-stone-300 text-sm mt-0.5 font-medium">

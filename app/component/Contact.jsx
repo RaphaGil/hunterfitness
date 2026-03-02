@@ -85,15 +85,15 @@ export default function Contact() {
     <AnimateIn>
       <section id="contact" className="py-24 md:py-32 px-6 bg-[#1a1a1a]" aria-labelledby="contact-heading">
         <div className="max-w-5xl mx-auto">
-          <h2 id="contact-heading" className="text-3xl md:text-4xl font-bold tracking-tight text-white mb-4 animate-on-scroll">
+          <h2 id="contact-heading" className="font-display text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 animate-on-scroll">
             Contact
           </h2>
           <p className="text-stone-300 mb-12 md:mb-16 max-w-xl font-thin md:text-lg animate-on-scroll animate-on-scroll-delay-1">
             Get in touch to start your fitness journey. We&apos;ll respond as soon as we can.
           </p>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
-            <div className="animate-on-scroll animate-on-scroll-delay-2">
+          <div className="grid grid-cols-1 gap-16 lg:gap-20">
+            <div className="animate-on-scroll animate-on-scroll-delay-2 hidden">
               <h3 className="text-xl font-semibold text-white mb-6">Send a message</h3>
             <form onSubmit={handleSubmit} className="space-y-5" noValidate>
               <div>
@@ -166,7 +166,7 @@ export default function Contact() {
               )}
               <button
                 type="submit"
-                className="inline-block border-b border-white pb-1 text-white font-medium transition-colors duration-200 hover:border-[#facc15] hover:text-[#facc15] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-wider hover:bg-[#fde047] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded-lg"
               >
                 Send message
               </button>
@@ -233,9 +233,9 @@ export default function Contact() {
                 <Image
                   src="/images/map.png"
                   alt="Map showing Hunter Fitness location at The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
+                  width={500}
+                  height={300}
+                  className="w-2/4 h-auto object-cover"
                 />
               </a>
             </div>
