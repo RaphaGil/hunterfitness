@@ -55,8 +55,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: ogImage,
-        width: 960,
-        height: 540,
+        width: 1200,
+        height: 630,
         alt: "Matthew Hunter - Personal Trainer at Hunter Fitness, Liverpool Street London",
       },
     ],

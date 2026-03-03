@@ -20,7 +20,7 @@ export default function Images() {
         {/* Center – single image on mobile (fixed bg broken on small screens), parallax on desktop */}
         <div className="relative w-full h-full min-h-[200px] md:min-h-[320px]">
           <Image
-            src="/images/12.jpeg"
+            src="/images/2.jpeg"
             alt="Training"
             fill
             sizes="(max-width: 768px) 100vw, 34vw"
