@@ -33,7 +33,7 @@ export default function PricingCTA() {
                 Book a consultation to find the right plan for you.
               </p>
               <Link
-                href="#contact"
+                href="/contact"
                 className="inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-[48px] px-6 py-4 sm:px-8 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-widest hover:bg-[#fde047] active:bg-[#fde047] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#facc15] rounded-lg touch-manipulation"
               >
                 Book a consultation

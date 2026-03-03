@@ -76,7 +76,7 @@ export default function Hero() {
           </p>
           <p className="mt-10 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
             <Link
-              href="#contact"
+              href="/contact"
               className="text-white border-b  text-sm tracking-widest uppercase hover:text-[#facc15] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               Start here
@@ -86,7 +86,7 @@ export default function Hero() {
       </div>
 
       {/* <a
-        href="#contact"
+        href="/contact"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-1 text-white/60 hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white rounded-sm"
         aria-label="Scroll down"
       >

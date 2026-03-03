@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 const links = [
   { href: "/", label: "Home" },
-  { href: "#about-heading", label: "About" },
-  { href: "#services-heading", label: "Services" },
-  { href: "#studio", label: "Studio" },
-  { href: "#benefits", label: "Benefits" },
-  { href: "#faq", label: "FAQ" },
-  { href: "#contact", label: "Contact" },
+  { href: "/about", label: "About" },
+  { href: "/personal-training-services", label: "Services" },
+  { href: "/personal-training-prices", label: "Pricing" },
+  { href: "/studio", label: "Studio" },
+  { href: "/benefits", label: "Benefits" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export default function NavBar() {

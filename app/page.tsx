@@ -8,7 +8,7 @@ import Information from '@/component/Information';
 import Studio from '@/component/Studio';
 import Target from '@/component/Target';
 import Images from '@/component/Images';
-import Services from '@/component/Services';
+import ServicesTeaser from '@/component/ServicesTeaser';
 import Review from '@/component/Review';
 import FAQ from '@/component/FAQ';
 import Contact from '@/component/Contact';
@@ -30,7 +30,7 @@ export default function HomePage() {
       <Studio />
       <Target />
       <Images />
-      <Services />
+      <ServicesTeaser />
       <Review />
       <FAQ />
       <Contact />
