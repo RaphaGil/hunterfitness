@@ -235,7 +235,7 @@ export default function Contact() {
                   alt="Map showing Hunter Fitness location at The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN"
                   width={500}
                   height={300}
-                  className="w-2/4 h-auto object-cover"
+                  className="md:w-2/4 h-auto object-cover"
                 />
               </a>
             </div>
