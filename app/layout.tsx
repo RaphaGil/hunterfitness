@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   },
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Personal Trainer in the City of Liverpool Street | Hunter Fitness",
+    default: "Personal Training - Liverpool Street",
     template: "%s | Hunter Fitness",
   },
   description:
@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: siteUrl,
     siteName: "Hunter Fitness",
-    title: "Personal Trainer in Liverpool Street | Hunter Fitness",
+    title: "Personal Training - Liverpool Street",
     description:
-      "Professional personal trainer in Liverpool Street, London. Bespoke training programmes and expert fitness coaching to help you reach your goals.",
+      "Private City studio, 1 min from Liverpool St. Expert 1-on-1 PT. Free consult. Private personal training in the City. Studio near Bank & Moorgate. Private 1-on-1 Studio. Free First Consultation. Expert guidance to achieve your health and fitness goals. Book your free consultation today.",
     images: siteImages,
   },
   twitter: {
