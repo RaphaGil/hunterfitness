@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Hunter Fitness - Personal trainer in Liverpool Street, London. Email, phone, and location at The Andaz Hotel Health Club. Book your free consultation.',
+    'Contact Hunter Fitness - Personal trainer in Liverpool Street, London. Email, phone, and location at 40 Liverpool Street. Book your free consultation.',
 };
 
 export default function ContactPage() {

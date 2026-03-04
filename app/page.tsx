@@ -3,10 +3,9 @@ import PricingCTA from '@/component/PricingCTA';
 import NavBar from '@/component/NavBar';
 import Banner from '@/component/Banner';
 import Benefits from '@/component/Benefits';
-import About from '@/component/About';
+import AboutTeaser from '@/component/AboutTeaser';
 import Information from '@/component/Information';
 import Studio from '@/component/Studio';
-import Target from '@/component/Target';
 import Images from '@/component/Images';
 import ServicesTeaser from '@/component/ServicesTeaser';
 import Review from '@/component/Review';
@@ -23,12 +22,11 @@ export default function HomePage() {
       <Hero />
       <PricingCTA />
   
-      <About />
+      <AboutTeaser />
       <Banner />
       <Benefits />
       <Information />
       <Studio />
-      <Target />
       <Images />
       <ServicesTeaser />
       <Review />

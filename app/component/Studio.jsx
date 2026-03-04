@@ -4,16 +4,21 @@ import Image from 'next/image';
 import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN";
+const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Hunter+Fitness+40+Liverpool+Street+London+EC2M+7QN";
 
 const facilities = [
   { name: 'State of the art gym equipment', icon: 'dumbbell' },
-  { name: 'Body composition tracking', icon: 'chart' },
-  { name: 'Luxurious showers and changing facilities', icon: 'shower' },
+  { name: 'Luxurious changing facilities', icon: 'shower' },
+  { name: 'Shower towels', icon: 'towel' },
+  { name: 'Steam room', icon: 'steam' },
+  { name: 'Peloton bike', icon: 'bike' },
+  { name: 'Rower', icon: 'rower' },
+  { name: 'Treadmill', icon: 'treadmill' },
+  { name: 'Cross trainer', icon: 'heart' },
+  { name: 'Stepper', icon: 'stepper' },
   { name: 'Functional training space', icon: 'space' },
   { name: 'Cardio equipment', icon: 'heart' },
   { name: 'Wi-Fi', icon: 'wifi' },
-  { name: 'Showers', icon: 'shower' },
   { name: 'Lockers', icon: 'locker' },
   { name: 'Hair dryers', icon: 'hairdryer' },
 ];
@@ -70,6 +75,59 @@ const FacilityIcon = ({ type }) => {
         <path d="M14 12c2-2 4-2 6 0" />
       </svg>
     ),
+    towel: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <rect width="16" height="8" x="4" y="8" rx="1" />
+        <path d="M4 10h16" />
+      </svg>
+    ),
+    steam: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M12 2v4" />
+        <path d="M12 18v4" />
+        <path d="m4.93 4.93 2.83 2.83" />
+        <path d="m16.24 16.24 2.83 2.83" />
+        <path d="M2 12h4" />
+        <path d="M18 12h4" />
+        <path d="m4.93 19.07 2.83-2.83" />
+        <path d="m16.24 7.76 2.83-2.83" />
+        <circle cx="12" cy="12" r="4" />
+      </svg>
+    ),
+    bike: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <circle cx="5.5" cy="17.5" r="3.5" />
+        <circle cx="18.5" cy="17.5" r="3.5" />
+        <path d="M15 6a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" />
+        <path d="m12 17.5-2-4 4-3 2 3" />
+        <path d="m19 8-2 4" />
+      </svg>
+    ),
+    rower: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M4 18v3" />
+        <path d="M20 18v3" />
+        <path d="M12 4v12" />
+        <path d="m8 16 4-4 4 4" />
+        <path d="M4 18h16" />
+      </svg>
+    ),
+    treadmill: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M22 12h-4l-3 9-3-9H2" />
+        <path d="M18 12V6" />
+        <path d="M2 18h20" />
+      </svg>
+    ),
+    stepper: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
+        <path d="M4 20h4" />
+        <path d="M8 16h4" />
+        <path d="M12 12h4" />
+        <path d="M16 8h4" />
+        <path d="M20 4h-4" />
+      </svg>
+    ),
   };
   return icons[type] || null;
 };
@@ -92,7 +150,7 @@ export default function Studio() {
           <div className="relative w-full aspect-16/10 md:aspect-21/9 rounded-lg overflow-hidden mb-12 md:mb-16 animate-on-scroll group">
             <Image
               src="/images/studio.jpg"
-              alt="Hunter Fitness studio at Andaz Hotel Health Club, Liverpool Street London"
+              alt="Hunter Fitness studio at Liverpool Street, London"
               fill
               className="object-cover transition-transform duration-700 group-hover:scale-105"
               sizes="(max-width: 768px) 100vw, 1280px"
@@ -117,7 +175,7 @@ export default function Studio() {
                   <h3 className="text-sm font-semibold tracking-widest text-[#facc15] uppercase">Location</h3>
                 </div>
                 <p className="text-white text-lg md:text-xl font-medium leading-snug mb-4">
-                  Andaz Hotel · 40 Liverpool Street · London EC2M 7QN
+                   40 Liverpool Street · London EC2M 7QN
                 </p>
                 <div className="mt-auto flex flex-wrap gap-4">
                 <a

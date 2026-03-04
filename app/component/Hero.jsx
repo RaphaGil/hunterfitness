@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 
-const goals = ['building muscle', 'losing weight', 'improving health', 'gaining strength', 'improving flexibility', 'a stronger body'];
+const goals = ['Improving Health', 'Feeling Better', 'Gaining Strength', 'Losing Weight', 'Increasing Flexibility', 'Building Muscle', 'Injury Prevention'];
 
-const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN";
+const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Hunter+Fitness+40+Liverpool+Street+London+EC2M+7QN";
 
 const TYPE_MS = 70;
 const PAUSE_MS = 2200;
@@ -74,14 +74,13 @@ export default function Hero() {
             {typedText}
             <span className="inline-block w-0.5 h-[0.9em] bg-[#facc15] ml-0.5 align-middle animate-pulse" aria-hidden />
           </p>
-          <p className="mt-10 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <Link
-              href="/contact"
-              className="text-white border-b  text-sm tracking-widest uppercase hover:text-[#facc15] transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
-            >
+        
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+            <Link href="/contact" className="btn-primary">
               Start here
             </Link>
-          </p>
+          
+          </div>
         </div>
       </div>
 
@@ -103,7 +102,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className="text-white/80 text-md tracking-wide hover:text-white transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
         >
-          Andaz Hotel · 40 Liverpool St · EC2M 7QN
+          40 Liverpool St · London EC2M 7QN
         </a>
       </div>
     </section>

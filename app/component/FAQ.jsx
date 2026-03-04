@@ -7,7 +7,7 @@ import AnimateIn from './AnimateIn';
 const faqs = [
   {
     question: 'Where is Hunter Fitness located?',
-    answer: 'Hunter Fitness is based at The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN, in the heart of the City of London.',
+    answer: 'Hunter Fitness is based at 40 Liverpool Street, London EC2M 7QN, in the heart of the City of London.',
     link: { href: '/studio', text: 'View our studio' },
   },
   {

@@ -19,7 +19,7 @@ const siteImages = [
   { url: `${siteUrl}/images/2.jpg`, width: 1200, height: 630, alt: "Personal training session at Hunter Fitness, Liverpool Street London" },
   { url: `${siteUrl}/images/4.jpg`, width: 1200, height: 630, alt: "Hunter Fitness training - strength and conditioning in the City of London" },
   { url: `${siteUrl}/images/10.jpg`, width: 1200, height: 630, alt: "Matthew Hunter - Personal Trainer at Hunter Fitness, Liverpool Street" },
-  { url: `${siteUrl}/images/studio.jpg`, width: 1200, height: 630, alt: "Hunter Fitness private studio at The Andaz Hotel, Liverpool Street" },
+  { url: `${siteUrl}/images/studio.jpg`, width: 1200, height: 630, alt: "Hunter Fitness private studio at Liverpool Street, London" },
   { url: `${siteUrl}/images/9.jpg`, width: 1200, height: 630, alt: "One-to-one personal training at Hunter Fitness London" },
 ];
 
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
 
 const address = {
   "@type": "PostalAddress",
-  streetAddress: "The Andaz Hotel Health Club, 40 Liverpool Street",
+  streetAddress: "40 Liverpool Street",
   addressLocality: "London",
   postalCode: "EC2M 7QN",
   addressCountry: "GB",
@@ -154,6 +154,13 @@ const jsonLdSchemas = [
         { "@type": "Offer", itemOffered: { "@type": "Service", name: "Sports Specific" } },
       ],
     },
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "5",
+      bestRating: "5",
+      worstRating: "1",
+      reviewCount: "4",
+    },
     review: [
       {
         "@type": "Review",
@@ -193,7 +200,7 @@ const jsonLdSchemas = [
     name: "Matthew Hunter",
     jobTitle: "Personal Trainer",
     description:
-      "Personal Trainer in the City of London. Highly motivated and dedicated fitness professional specialising in bespoke training programmes tailored to individual needs.",
+      "Personal Trainer in the City of London. Specialises in personal training for individuals with demanding, high-pressure careers, providing structure, motivation, and accountability to help clients achieve long-term results while maintaining balance in work and personal life.",
     url: siteUrl,
     image: [
       `${siteUrl}/images/12.jpeg`,
@@ -288,7 +295,7 @@ const jsonLdSchemas = [
         name: "Where is Hunter Fitness located?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Hunter Fitness is based at The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN, in the heart of the City of London.",
+          text: "Hunter Fitness is based at 40 Liverpool Street, London EC2M 7QN, in the heart of the City of London.",
         },
       },
       {

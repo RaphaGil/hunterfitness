@@ -13,17 +13,16 @@ export default function About() {
           <h2 className="text-5xl md:text-7xl font-bold tracking-tight text-white animate-hero-float" style={{ animationDelay: '0.3s' }}>Matthew Hunter</h2>
           <h4 className="text-xl md:text-2xl font-thin tracking-wide text-stone-200 animate-hero-float" style={{ animationDelay: '0.6s' }}>Personal Trainer City of London</h4>
           <p className="text-stone-300 text-lg leading-relaxed mt-8 font-normal">
-            Sport and fitness has always been my great passion, having competed in athletics 
-            from a very young age and ranking among the top 10 in England for my age group for a 
-            number of years. It was this love of athletics, which prompted my desire to establish a 
-            career in fitness, with the aim of motivating and inspiring others to attain a healthy 
-            lifestyle and achieve their fitness goals.
-            <br />
-            <br />
-            I am highly motivated and dedicated fitness Professional. I pride myself on my professional attitude and ability to tailor a programme or session to my clients’ individual needs and wants, recognising that everyone is different and therefore has vastly different attitudes, goals and interests when it comes to fitness and training. 
-            <br/>
-            <br/>
-            My personal goal is to constantly strive to achieve the most beneficial and rewarding training experience for each of his clients, while offering motivation, encouragement and support in order to maximise results and enjoyment.
+            I specialise in personal training for individuals with demanding, high‑pressure careers, helping them prioritise their health and fitness amidst busy schedules. My approach provides structure, motivation, and accountability, ensuring that every session is purposeful and aligned with their goals. By tailoring programmes to suit their lifestyle, I support clients in achieving long‑term results while maintaining balance in both work and personal life.
+          </p>
+          <p className="text-stone-300 text-lg leading-relaxed mt-6 font-normal">
+            Sport and fitness have always been my passion. I competed in athletics from a young age and ranked among the top 10 in England for my age group for several years. This love led me to pursue a career in fitness, motivated by the desire to inspire others to adopt a healthy lifestyle and achieve their fitness goals.
+          </p>
+          <p className="text-stone-300 text-lg leading-relaxed mt-6 font-normal">
+            I&apos;m a highly motivated and dedicated fitness professional. I pride myself on my professional attitude and ability to tailor programmes or sessions to individual needs and wants, recognising that everyone is different in terms of fitness attitudes, goals, and interests.
+          </p>
+          <p className="text-stone-300 text-lg leading-relaxed mt-6 font-normal">
+            My personal goal is to provide the most beneficial and rewarding training experience for each client, offering motivation, encouragement, and support to maximise results and enjoyment.
           </p>
           </div>
         </div>

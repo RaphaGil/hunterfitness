@@ -85,7 +85,7 @@ export default function Pricing() {
 
         {/* Notes */}
         <div className="space-y-3 text-stone-500 text-sm md:text-base animate-on-scroll animate-on-scroll-delay-5">
-          <p>Please note that all prices are subject to negotiation based on individual circumstances and availability.</p>
+          <p>All prices are negotiable and can be adjusted in accordance with your specific requirements and scheduling needs. Prices can be further negotiable if you are flexible with times. We are committed to accommodating individual budgets to provide a solution that is both effective and financially suitable.</p>
           <p>Sessions are subject to availability.</p>
         </div>
 
@@ -93,7 +93,7 @@ export default function Pricing() {
         <div className="mt-14 md:mt-16 text-center animate-on-scroll animate-on-scroll-delay-6">
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-8 py-4 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-widest hover:bg-[#fde047] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#facc15] rounded-md"
+            className="btn-primary"
           >
             Book a consultation
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">

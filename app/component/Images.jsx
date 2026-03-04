@@ -39,7 +39,7 @@ export default function Images() {
         <div className="relative w-full h-full min-h-[200px] md:min-h-[320px] hidden md:block">
           <Image
             src="/images/studio.jpg"
-            alt="Hunter Fitness private studio - personal training space at The Andaz Hotel, Liverpool Street London"
+            alt="Hunter Fitness private studio - personal training space at Liverpool Street, London"
             fill
             sizes="(max-width: 768px) 0, 33vw"
             className="object-cover"
@@ -55,7 +55,7 @@ export default function Images() {
           </p>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-white/10 backdrop-blur-sm border-2 border-white/50 text-white font-semibold tracking-wider uppercase transition-all duration-300 hover:bg-[#facc15] hover:border-[#facc15] hover:text-stone-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-stone-900"
+            className="btn-primary"
           >
             LET&apos;S START
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>

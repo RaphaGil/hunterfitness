@@ -34,7 +34,7 @@ export default function PricingCTA() {
               </p>
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 w-full sm:w-auto min-h-[48px] px-6 py-4 sm:px-8 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-widest hover:bg-[#fde047] active:bg-[#fde047] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#facc15] rounded-lg touch-manipulation"
+                className="btn-primary w-full sm:w-auto"
               >
                 Book a consultation
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 shrink-0" aria-hidden>
@@ -43,8 +43,8 @@ export default function PricingCTA() {
               </Link>
             </div>
           </div>
-          <p className="relative text-center lg:text-left mt-4 sm:mt-6 text-stone-500 text-xs sm:text-sm">
-            Please note that all prices are subject to negotiation based on individual circumstances and availability.
+          <p className="relative text-center lg:text-left mt-4 sm:mt-6 text-stone-500 text-xs sm:text-sm max-w-2xl">
+            All prices are negotiable and can be adjusted in accordance with your specific requirements and scheduling needs. Prices can be further negotiable if you are flexible with times. We are committed to accommodating individual budgets to provide a solution that is both effective and financially suitable.
           </p>
         </div>
       </section>

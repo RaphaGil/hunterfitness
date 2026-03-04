@@ -49,14 +49,14 @@ export default function Contact() {
     },
     {
       label: 'Phone',
-      value: '+44 20 1234 5678 / +44 7789 991 975',
-      href: 'tel:+442012345678',
+      value: '+44 7789 991 975',
+      href: 'tel:+447789991975',
       icon: icons.phone,
     },
     {
       label: 'Address',
-      value: 'The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN',
-      href: 'https://www.google.com/maps?q=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN',
+      value: '40 Liverpool Street, London EC2M 7QN',
+      href: 'https://www.google.com/maps?q=Hunter+Fitness+40+Liverpool+Street+London+EC2M+7QN',
       icon: icons.address,
     },
     {
@@ -167,7 +167,7 @@ export default function Contact() {
               )}
               <button
                 type="submit"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-wider hover:bg-[#fde047] transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a] rounded-lg"
+                className="btn-primary"
               >
                 Send message
               </button>
@@ -216,7 +216,7 @@ export default function Contact() {
             </ul>
             <div className="mt-4 border-t border-stone-700 pt-4">
               <a
-                href="https://www.google.com/maps?q=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN"
+                href="https://www.google.com/maps?q=Hunter+Fitness+40+Liverpool+Street+London+EC2M+7QN"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block group rounded-sm overflow-hidden  hover:border-[#facc15]/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#facc15] focus-visible:ring-offset-2 focus-visible:ring-offset-[#1a1a1a]"
@@ -228,16 +228,11 @@ export default function Contact() {
                   </span>
                   <div className="min-w-0">
                     <p className="text-xs font-semibold tracking-wider text-stone-400 uppercase">Address</p>
-                    <p className="mt-0.5 text-stone-100 font-medium">The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN</p>
+                    <p className="mt-0.5 text-stone-100 font-medium">40 Liverpool Street, London EC2M 7QN</p>
+                    <p className="text-stone-400 text-xs">1 min from Liverpool Street station</p>
                   </div>
                 </div>
-                <Image
-                  src="/images/map.png"
-                  alt="Map showing Hunter Fitness location at The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN"
-                  width={500}
-                  height={300}
-                  className="md:w-2/4 h-auto object-cover"
-                />
+           
               </a>
             </div>
             </div>

@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Studio',
   description:
-    'Hunter Fitness studio at The Andaz Hotel Health Club, Liverpool Street. State of the art gym equipment, luxurious facilities, and private training space in the City of London.',
+    'Hunter Fitness studio at Liverpool Street, London. State of the art gym equipment, luxurious facilities, and private training space in the City of London.',
 };
 
 export default function StudioPage() {

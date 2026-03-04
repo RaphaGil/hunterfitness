@@ -19,7 +19,7 @@ export default function ServicesTeaser() {
           <div className="mt-10 animate-on-scroll animate-on-scroll-delay-3">
             <Link
               href="/personal-training-services"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#facc15] text-stone-900 font-semibold text-sm uppercase tracking-widest hover:bg-[#fde047] transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#facc15] rounded-md"
+              className="btn-primary"
             >
               View all services
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4">

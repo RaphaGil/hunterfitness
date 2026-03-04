@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About',
   description:
-    'Matthew Hunter - Personal Trainer in the City of London. Learn about his background in athletics, bespoke training approach, and dedication to helping clients achieve their fitness goals.',
+    'Matthew Hunter - Personal Trainer in the City of London. Specialises in personal training for professionals with demanding careers. Learn about his background in athletics and tailored approach to helping clients achieve long-term fitness goals.',
 };
 
 export default function AboutPage() {
