@@ -4,10 +4,19 @@ import Footer from '@/component/Footer';
 import PersonalTrainerBadge from '@/component/PersonalTrainerBadge';
 import type { Metadata } from 'next';
 
+const siteUrl = 'https://hunterfitness.co.uk';
+
 export const metadata: Metadata = {
   title: 'Contact',
   description:
     'Contact Hunter Fitness - Personal trainer in Liverpool Street, London. Email, phone, and location at 40 Liverpool Street. Book your free consultation.',
+  openGraph: {
+    images: [{ url: `${siteUrl}/images/2.jpg`, width: 1200, height: 630, alt: 'Personal training session at Hunter Fitness, Liverpool Street London' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [`${siteUrl}/images/2.jpg`],
+  },
 };
 
 export default function ContactPage() {

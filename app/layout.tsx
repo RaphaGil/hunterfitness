@@ -141,7 +141,6 @@ const jsonLdSchemas = [
     openingHoursSpecification,
     areaServed: { "@type": "City", name: "London" },
     priceRange: "££",
-    sameAs: ["https://twitter.com/HunterFitness"],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
       name: "Personal Training Services",

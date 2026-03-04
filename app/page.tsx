@@ -15,6 +15,15 @@ import Footer from '@/component/Footer';
 import PersonalTrainerBadge from '@/component/PersonalTrainerBadge';
 import type { Metadata } from 'next';
 
+const siteUrl = 'https://hunterfitness.co.uk';
+
+const defaultImage = {
+  url: `${siteUrl}/images/12.jpeg`,
+  width: 1200,
+  height: 630,
+  alt: 'Hunter Fitness personal training - Matthew Hunter at Liverpool Street studio',
+};
+
 export const metadata: Metadata = {
   title: 'Personal Training - Liverpool Street',
   description:
@@ -23,6 +32,11 @@ export const metadata: Metadata = {
     title: 'Personal Training - Liverpool Street',
     description:
       'Private City studio, 1 min from Liverpool St. Expert 1-on-1 PT. Free consult. Private personal training in the City. Studio near Bank & Moorgate. Private 1-on-1 Studio. Free First Consultation. Expert guidance to achieve your health and fitness goals. Book your free consultation today.',
+    images: [defaultImage],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: [defaultImage.url],
   },
 };
 
