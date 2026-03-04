@@ -137,10 +137,10 @@ export default function Studio() {
       <section id="studio" className="py-20 md:py-28 px-6 bg-stone-950/50" aria-labelledby="studio-heading">
         <div className="max-w-6xl xl:max-w-7xl mx-auto">
           <header className="text-center mb-12 md:mb-16 animate-on-scroll">
-            <h2 id="studio-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+            <h2 id="studio-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               THE STUDIO
             </h2>
-            <p className="mt-4 text-stone-400 text-lg md:text-xl max-w-2xl mx-auto font-thin">
+            <p className="mt-4 text-stone-400 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-thin">
               Train at a premium location in the heart of the City.
             </p>
           </header>
@@ -198,16 +198,16 @@ export default function Studio() {
             {/* Facilities - spans 3 cols */}
             <div className="md:col-span-3">
               <h3 className="text-sm font-semibold tracking-widest text-[#facc15] uppercase mb-5">Facilities</h3>
-              <div className="grid sm:grid-cols-2 gap-4">
+              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
                 {facilities.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-start gap-4 rounded-lg border border-stone-700/60 bg-stone-900/40 px-4 py-4 hover:border-stone-600 hover:bg-stone-900/60 transition-colors duration-300"
+                    className="flex items-start gap-2 sm:gap-4 rounded-lg border border-stone-700/60 bg-stone-900/40 px-3 py-3 sm:px-4 sm:py-4 hover:border-stone-600 hover:bg-stone-900/60 transition-colors duration-300 min-w-0"
                   >
-                    <span className="flex items-center justify-center w-9 h-9 rounded-md bg-[#facc15]/10 text-[#facc15] shrink-0 mt-0.5" aria-hidden>
+                    <span className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-md bg-[#facc15]/10 text-[#facc15] shrink-0 mt-0.5" aria-hidden>
                       <FacilityIcon type={item.icon} />
                     </span>
-                    <p className="text-stone-200 text-sm md:text-base leading-relaxed pt-1">{item.name}</p>
+                    <p className="text-stone-200 text-xs sm:text-sm md:text-base leading-relaxed pt-1 break-words min-w-0">{item.name}</p>
                   </div>
                 ))}
               </div>

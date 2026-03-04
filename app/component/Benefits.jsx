@@ -152,31 +152,31 @@ export default function Benefits() {
       <section id="benefits" className="py-16 md:py-24 px-6 bg-[#1a1a1a]" aria-labelledby="benefits-heading">
         <div className="max-w-6xl xl:max-w-7xl mx-auto">
           <header className="text-center mb-12 md:mb-16 animate-on-scroll">
-            <h2 id="benefits-heading" className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
+            <h2 id="benefits-heading" className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-white">
               WHY TRAIN WITH US
             </h2>
-            <p className="mt-4 text-stone-400 text-lg md:text-xl max-w-xl mx-auto font-thin">
+            <p className="mt-4 text-stone-400 text-base sm:text-lg md:text-xl max-w-xl mx-auto font-thin">
               Everything you need to achieve your fitness goals
             </p>
           </header>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 animate-on-scroll animate-on-scroll-delay-1">
+          <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 animate-on-scroll animate-on-scroll-delay-1">
             {benefits.map((benefit) => {
               const linkHref = benefit.text.includes('studio') ? '/studio' : benefit.text.includes('payment') ? '/personal-training-prices' : benefit.text.includes('Liverpool Street') ? '/studio' : null;
               return (
                 <div
                   key={benefit.text}
-                  className="flex items-start gap-4 rounded-lg border border-stone-700/80 bg-stone-900/50 px-5 py-5 hover:border-[#facc15]/30 hover:bg-stone-900/70 transition-all duration-300"
+                  className="flex items-start gap-2 sm:gap-4 rounded-lg border border-stone-700/80 bg-stone-900/50 px-3 py-3 sm:px-4 sm:py-4 md:px-5 md:py-5 hover:border-[#facc15]/30 hover:bg-stone-900/70 transition-all duration-300 min-w-0"
                 >
-                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#facc15]/10 text-[#facc15] shrink-0" aria-hidden>
+                  <span className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 rounded-lg bg-[#facc15]/10 text-[#facc15] shrink-0" aria-hidden>
                     <BenefitIcon type={benefit.icon} />
                   </span>
                   {linkHref ? (
-                    <Link href={linkHref} className="text-stone-200 hover:text-[#facc15] transition-colors pt-2 block">
+                    <Link href={linkHref} className="text-stone-200 hover:text-[#facc15] transition-colors pt-1 sm:pt-2 block text-xs sm:text-sm md:text-base font-medium leading-snug break-words min-w-0">
                       {benefit.text}
                     </Link>
                   ) : (
-                    <p className="text-stone-200 text-sm md:text-base font-medium leading-snug pt-2">{benefit.text}</p>
+                    <p className="text-stone-200 text-xs sm:text-sm md:text-base font-medium leading-snug pt-1 sm:pt-2 break-words min-w-0">{benefit.text}</p>
                   )}
                 </div>
               );
