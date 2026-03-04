@@ -25,10 +25,12 @@ export const metadata: Metadata = {
     template: "%s | Hunter Fitness",
   },
   description:
-    "Professional personal trainer in the City of Liverpool Street, London. Get 1-on-1 fitness coaching, bespoke training programmes, and expert guidance to achieve your health and fitness goals. Book your free consultation today.",
+    "Private City studio, 1 min from Liverpool St. Expert 1-on-1 PT. Free consult. Private personal training in the City. Studio near Bank & Moorgate. Private 1-on-1 Studio. Free First Consultation. Expert guidance to achieve your health and fitness goals. Book your free consultation today.",
   keywords: [
     "personal trainer in the City of Liverpool Street",
     "personal trainer London",
+    "affordable personal training in London",
+    "affordable personal trainer London",
     "fitness trainer Liverpool Street",
     "PT Liverpool Street",
     "gym trainer London",

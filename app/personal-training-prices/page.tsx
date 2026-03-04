@@ -7,7 +7,13 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Personal Training Prices',
   description:
-    'Personal training prices at Hunter Fitness, Liverpool Street. Session packs from £55, monthly plans from £250. Single sessions, 5, 10, 20 session packs. Book a free consultation.',
+    'Affordable personal training in London at Hunter Fitness, Liverpool Street. Session packs from £55, monthly plans from £250. Single sessions, 5, 10, 20 session packs. Book a free consultation.',
+  keywords: [
+    'affordable personal training London',
+    'affordable personal trainer London',
+    'personal training prices Liverpool Street',
+    'cheap personal trainer London',
+  ],
 };
 
 export default function PricingPage() {
