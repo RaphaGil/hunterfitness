@@ -46,7 +46,7 @@ export default function Images() {
           />
         </div>
 
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6 bg-stone-900/55 animate-on-scroll">
+        <div className="absolute inset-0 hidden md:flex flex-col items-center justify-center text-center px-6 bg-stone-900/55 animate-on-scroll">
           <h1 id="start-training-heading" className="font-display text-4xl md:text-6xl lg:text-7xl font-bold mb-4 md:mb-6 text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">
             START TRAINING TODAY
           </h1>
