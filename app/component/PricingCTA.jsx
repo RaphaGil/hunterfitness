@@ -30,7 +30,7 @@ export default function PricingCTA() {
             {/* CTA */}
             <div className="shrink-0 text-right w-auto">
               <p className="text-stone-300 text-sm md:text-base mb-3 md:mb-4">
-                Book a consultation to find the right plan for you.
+                Book a consultation to find the right plan for you. <Link href="/personal-training-prices" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">See full pricing</Link>
               </p>
               <Link
                 href="/contact"

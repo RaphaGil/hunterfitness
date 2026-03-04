@@ -5,12 +5,10 @@ import Image from "next/image";
 import Link from "next/link";
 const links = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+
   { href: "/personal-training-services", label: "Services" },
   { href: "/personal-training-prices", label: "Pricing" },
   { href: "/studio", label: "Studio" },
-  { href: "/benefits", label: "Benefits" },
-  { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ];
 

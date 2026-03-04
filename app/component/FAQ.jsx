@@ -1,28 +1,34 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 const faqs = [
   {
     question: 'Where is Hunter Fitness located?',
     answer: 'Hunter Fitness is based at The Andaz Hotel Health Club, 40 Liverpool Street, London EC2M 7QN, in the heart of the City of London.',
+    link: { href: '/studio', text: 'View our studio' },
   },
   {
     question: 'What areas do you serve?',
     answer: 'We primarily serve clients in the City of London and Liverpool Street area, including professionals working in the financial district.',
+    link: null,
   },
   {
     question: 'Do you offer a free consultation?',
-    answer: 'Yes, we offer a free consultation to discuss your goals and how we can help. Get in touch via email or phone to book.',
+    answer: 'Yes, we offer a free consultation to discuss your goals and how we can help.',
+    link: { href: '/contact', text: 'Get in touch to book' },
   },
   {
     question: 'What should I expect from my first session?',
     answer: 'Your first session will include an assessment of your fitness level, a discussion of your goals, and a tailored programme designed for your individual needs.',
+    link: { href: '/personal-training-services', text: 'Explore our services' },
   },
   {
     question: 'Do you work with clients who have medical conditions?',
     answer: 'Yes, we work closely with doctors, surgeons, and physiotherapists to help clients recover from conditions including lower back pain, high blood pressure, obesity, diabetes and many others.',
+    link: null,
   },
 ];
 
@@ -78,6 +84,14 @@ export default function FAQ() {
                       <div className="px-5 md:px-6 pb-5 md:pb-6 pt-0">
                         <p className="text-stone-300 text-sm md:text-base leading-relaxed border-t border-stone-700/80 pt-4">
                           {faq.answer}
+                          {faq.link && (
+                            <>
+                              {' '}
+                              <Link href={faq.link.href} className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">
+                                {faq.link.text}
+                              </Link>
+                            </>
+                          )}
                         </p>
                       </div>
                     </div>

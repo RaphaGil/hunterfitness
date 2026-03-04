@@ -11,7 +11,7 @@ export default function Images() {
         <div className="relative w-full h-full min-h-[200px] md:min-h-[320px] hidden md:block">
           <Image
             src="/images/9.jpg"
-            alt="Training"
+            alt="Personal training session at Hunter Fitness - one-to-one fitness coaching in Liverpool Street, London"
             fill
             sizes="(max-width: 768px) 0, 33vw"
             className="object-cover"
@@ -21,7 +21,7 @@ export default function Images() {
         <div className="relative w-full h-full min-h-[200px] md:min-h-[320px]">
           <Image
             src="/images/2.jpg"
-            alt="Training"
+            alt="Hunter Fitness personal training - Matthew Hunter coaching client at Liverpool Street studio"
             fill
             sizes="(max-width: 768px) 100vw, 34vw"
             className="object-cover md:hidden"
@@ -39,7 +39,7 @@ export default function Images() {
         <div className="relative w-full h-full min-h-[200px] md:min-h-[320px] hidden md:block">
           <Image
             src="/images/studio.jpg"
-            alt="Training"
+            alt="Hunter Fitness private studio - personal training space at The Andaz Hotel, Liverpool Street London"
             fill
             sizes="(max-width: 768px) 0, 33vw"
             className="object-cover"

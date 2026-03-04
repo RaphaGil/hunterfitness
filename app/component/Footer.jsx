@@ -1,10 +1,29 @@
+import Link from 'next/link';
+
 export default function Footer() {
   const year = new Date().getFullYear();
   const iconClass = "w-5 h-5 text-stone-400 hover:text-[#facc15] transition";
+  const footerLinks = [
+    { href: '/about', label: 'About' },
+    { href: '/personal-training-services', label: 'Services' },
+    { href: '/personal-training-prices', label: 'Pricing' },
+    { href: '/studio', label: 'Studio' },
+    { href: '/benefits', label: 'Benefits' },
+    { href: '/faq', label: 'FAQ' },
+    { href: '/contact', label: 'Contact' },
+  ];
 
   return (
     <footer className="border-t border-stone-800 py-8 px-6 bg-[#1a1a1a]" role="contentinfo">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div className="max-w-6xl mx-auto flex flex-col gap-6">
+        <nav aria-label="Footer" className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+          {footerLinks.map(({ href, label }) => (
+            <Link key={href} href={href} className="text-stone-400 hover:text-[#facc15] transition-colors text-sm">
+              {label}
+            </Link>
+          ))}
+        </nav>
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-6">
         <div className="flex items-center gap-5">
     
           <a href="mailto:matt@hunterfitness.com" aria-label="Email" className={iconClass}>
@@ -41,6 +60,7 @@ export default function Footer() {
             Raphaela Gil
           </a>
         </p>
+      </div>
       </div>
     </footer>
   );

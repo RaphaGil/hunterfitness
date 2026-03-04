@@ -44,7 +44,7 @@ export default function Services() {
           </h1>
           <div className="mt-4 w-16 h-1 bg-[#facc15] mx-auto rounded-full animate-on-scroll animate-on-scroll-delay-2" aria-hidden />
           <p className="mt-4 text-stone-400 max-w-xl mx-auto lg:text-lg font-thin animate-on-scroll animate-on-scroll-delay-2">
-            Browse our services below.
+            Browse our services below. See our <Link href="/studio" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">studio</Link> or <Link href="/personal-training-prices" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">pricing</Link>.
           </p>
         </header>
 
@@ -60,7 +60,7 @@ export default function Services() {
             <div className="relative w-full aspect-4/3 lg:w-[420px] xl:w-[500px] lg:aspect-auto lg:min-h-[560px] rounded-md overflow-hidden animate-on-scroll ring-2 ring-stone-700/60 ring-offset-4 ring-offset-[#1a1a1a] shadow-2xl shadow-black/40 z-10">
               <Image
                 src="/images/4.jpg"
-                alt="Hunter Fitness training"
+                alt="Hunter Fitness personal training - strength and conditioning session in Liverpool Street, London"
                 fill
                 sizes="(max-width: 1024px) 100vw, 500px"
                 className="object-cover"

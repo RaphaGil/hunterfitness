@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 const icons = {
@@ -89,7 +90,7 @@ export default function Contact() {
             Contact
           </h2>
           <p className="text-stone-300 mb-12 md:mb-16 max-w-xl font-thin md:text-lg animate-on-scroll animate-on-scroll-delay-1">
-            Get in touch to start your fitness journey. We&apos;ll respond as soon as we can.
+            Get in touch to start your fitness journey. We&apos;ll respond as soon as we can. Explore our <Link href="/personal-training-services" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">services</Link>, <Link href="/personal-training-prices" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">pricing</Link>, or <Link href="/studio" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">studio</Link>.
           </p>
 
           <div className="grid grid-cols-1 gap-16 lg:gap-20">

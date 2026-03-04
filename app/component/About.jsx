@@ -23,7 +23,7 @@ export default function About() {
             I am highly motivated and dedicated fitness Professional. I pride myself on my professional attitude and ability to tailor a programme or session to my clients’ individual needs and wants, recognising that everyone is different and therefore has vastly different attitudes, goals and interests when it comes to fitness and training. 
             <br/>
             <br/>
-            My personal goal is to constantly strive to achieve the most beneficial and rewarding training experience for each of his clients, while offering motivation, encouragement and support in order to maximise results and enjoyment..
+            My personal goal is to constantly strive to achieve the most beneficial and rewarding training experience for each of his clients, while offering motivation, encouragement and support in order to maximise results and enjoyment.
           </p>
           </div>
         </div>
@@ -31,7 +31,7 @@ export default function About() {
         <div className="md:w-2/3 relative w-full aspect-3/4 sm:aspect-4/5 md:aspect-auto md:min-h-[700px] md:h-[80vh] overflow-hidden animate-from-right">
           <Image
             src="/images/10.jpg"
-            alt=""
+            alt="Matthew Hunter - Personal Trainer at Hunter Fitness, Liverpool Street London"
             fill
             sizes="(max-width: 768px) 100vw, 66vw"
             className="object-contain object-center md:animate-float"

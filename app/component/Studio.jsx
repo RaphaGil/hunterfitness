@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 const MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Hunter+Fitness+The+Andaz+Hotel+Health+Club+40+Liverpool+Street+London+EC2M+7QN";
@@ -83,7 +84,7 @@ export default function Studio() {
               THE STUDIO
             </h2>
             <p className="mt-4 text-stone-400 text-lg md:text-xl max-w-2xl mx-auto font-thin">
-              Train at a premium location in the heart of the City
+              Train at a premium location in the heart of the City.
             </p>
           </header>
 
@@ -118,17 +119,22 @@ export default function Studio() {
                 <p className="text-white text-lg md:text-xl font-medium leading-snug mb-4">
                   Andaz Hotel · 40 Liverpool Street · London EC2M 7QN
                 </p>
+                <div className="mt-auto flex flex-wrap gap-4">
                 <a
                   href={MAPS_URL}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="mt-auto inline-flex items-center gap-2 text-[#facc15] font-medium hover:text-[#fde047] transition-colors group/link"
+                  className="inline-flex items-center gap-2 text-[#facc15] font-medium hover:text-[#fde047] transition-colors group/link"
                 >
                   Get directions
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="w-4 h-4 group-hover/link:translate-x-0.5 transition-transform">
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
                 </a>
+                <Link href="/contact" className="text-[#facc15] font-medium hover:text-[#fde047] transition-colors">
+                  Book a session
+                </Link>
+              </div>
               </div>
             </div>
 

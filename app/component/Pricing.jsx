@@ -26,7 +26,7 @@ export default function Pricing() {
           </h1>
           <div className="mt-4 w-16 h-1 bg-[#facc15] mx-auto rounded-full animate-on-scroll animate-on-scroll-delay-2" aria-hidden />
           <p className="mt-4 text-stone-400 max-w-xl mx-auto lg:text-lg font-thin animate-on-scroll animate-on-scroll-delay-2">
-            All sessions are 1 hour. Choose the option that works best for you.
+            All sessions are 1 hour. Choose the option that works best for you. Explore our <Link href="/personal-training-services" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">services</Link> or <Link href="/studio" className="text-[#facc15] hover:text-[#fde047] transition-colors underline underline-offset-2">studio</Link>.
           </p>
         </header>
 

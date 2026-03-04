@@ -13,7 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 const siteUrl = "https://hunterfitness.co.uk";
-const ogImage = `${siteUrl}/images/matt2_960x540.jpg`;
+
+const siteImages = [
+  { url: `${siteUrl}/images/12.jpeg`, width: 1200, height: 630, alt: "Hunter Fitness personal training - Matthew Hunter at Liverpool Street studio" },
+  { url: `${siteUrl}/images/2.jpg`, width: 1200, height: 630, alt: "Personal training session at Hunter Fitness, Liverpool Street London" },
+  { url: `${siteUrl}/images/4.jpg`, width: 1200, height: 630, alt: "Hunter Fitness training - strength and conditioning in the City of London" },
+  { url: `${siteUrl}/images/10.jpg`, width: 1200, height: 630, alt: "Matthew Hunter - Personal Trainer at Hunter Fitness, Liverpool Street" },
+  { url: `${siteUrl}/images/studio.jpg`, width: 1200, height: 630, alt: "Hunter Fitness private studio at The Andaz Hotel, Liverpool Street" },
+  { url: `${siteUrl}/images/9.jpg`, width: 1200, height: 630, alt: "One-to-one personal training at Hunter Fitness London" },
+];
 
 export const metadata: Metadata = {
   icons: {
@@ -40,6 +48,8 @@ export const metadata: Metadata = {
     "personal training in london",
     "Matthew Hunter personal trainer",
     "one to one training London",
+    "gym near Liverpool Street station",
+    "best gyms near Liverpool Street",
   ],
   authors: [{ name: "Matthew Hunter", url: siteUrl }],
   creator: "Hunter Fitness",
@@ -54,21 +64,14 @@ export const metadata: Metadata = {
     title: "Personal Trainer in Liverpool Street | Hunter Fitness",
     description:
       "Professional personal trainer in Liverpool Street, London. Bespoke training programmes and expert fitness coaching to help you reach your goals.",
-    images: [
-      {
-        url: ogImage,
-        width: 1200,
-        height: 630,
-        alt: "Matthew Hunter - Personal Trainer at Hunter Fitness, Liverpool Street London",
-      },
-    ],
+    images: siteImages,
   },
   twitter: {
     card: "summary_large_image",
     title: "Personal Trainer in Liverpool Street | Hunter Fitness",
     description:
       "Professional personal trainer in Liverpool Street, London. Bespoke training programmes and expert fitness coaching.",
-    images: [ogImage],
+    images: siteImages.map((img) => img.url),
   },
   robots: {
     index: true,
@@ -121,7 +124,15 @@ const jsonLdSchemas = [
     description:
       "Professional personal trainer in the City of Liverpool Street, London. Bespoke training programmes and expert fitness coaching.",
     url: siteUrl,
-    image: `${siteUrl}/images/hunterfitnesslogo.png`,
+    image: [
+      `${siteUrl}/images/hunterfitnesslogo.png`,
+      `${siteUrl}/images/12.jpeg`,
+      `${siteUrl}/images/2.jpg`,
+      `${siteUrl}/images/4.jpg`,
+      `${siteUrl}/images/10.jpg`,
+      `${siteUrl}/images/studio.jpg`,
+      `${siteUrl}/images/9.jpg`,
+    ],
     logo: `${siteUrl}/images/hunterfitnesslogo.png`,
     telephone: "+442012345678",
     email: "hello@hunterfitness.com",
@@ -184,7 +195,12 @@ const jsonLdSchemas = [
     description:
       "Personal Trainer in the City of London. Highly motivated and dedicated fitness professional specialising in bespoke training programmes tailored to individual needs.",
     url: siteUrl,
-    image: `${siteUrl}/images/matt2_960x540.jpg`,
+    image: [
+      `${siteUrl}/images/12.jpeg`,
+      `${siteUrl}/images/10.jpg`,
+      `${siteUrl}/images/2.jpg`,
+      `${siteUrl}/images/4.jpg`,
+    ],
     worksFor: { "@id": `${siteUrl}/#organization` },
     knowsAbout: [
       "Strength and Conditioning",

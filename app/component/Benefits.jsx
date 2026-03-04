@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import AnimateIn from './AnimateIn';
 
 const benefits = [
@@ -163,18 +164,34 @@ export default function Benefits() {
           </header>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 animate-on-scroll animate-on-scroll-delay-1">
-            {benefits.map((benefit) => (
-              <div
-                key={benefit.text}
-                className="flex items-start gap-4 rounded-lg border border-stone-700/80 bg-stone-900/50 px-5 py-5 hover:border-[#facc15]/30 hover:bg-stone-900/70 transition-all duration-300"
-              >
-                <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#facc15]/10 text-[#facc15] shrink-0" aria-hidden>
-                  <BenefitIcon type={benefit.icon} />
-                </span>
-                <p className="text-stone-200 text-sm md:text-base font-medium leading-snug pt-2">{benefit.text}</p>
-              </div>
-            ))}
+            {benefits.map((benefit) => {
+              const linkHref = benefit.text.includes('studio') ? '/studio' : benefit.text.includes('payment') ? '/personal-training-prices' : benefit.text.includes('Liverpool Street') ? '/studio' : null;
+              return (
+                <div
+                  key={benefit.text}
+                  className="flex items-start gap-4 rounded-lg border border-stone-700/80 bg-stone-900/50 px-5 py-5 hover:border-[#facc15]/30 hover:bg-stone-900/70 transition-all duration-300"
+                >
+                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#facc15]/10 text-[#facc15] shrink-0" aria-hidden>
+                    <BenefitIcon type={benefit.icon} />
+                  </span>
+                  {linkHref ? (
+                    <Link href={linkHref} className="text-stone-200 hover:text-[#facc15] transition-colors pt-2 block">
+                      {benefit.text}
+                    </Link>
+                  ) : (
+                    <p className="text-stone-200 text-sm md:text-base font-medium leading-snug pt-2">{benefit.text}</p>
+                  )}
+                </div>
+              );
+            })}
           </div>
+          <p className="mt-8 text-center text-stone-400 text-sm">
+            <Link href="/personal-training-services" className="text-[#facc15] hover:text-[#fde047] transition-colors">View our services</Link>
+            {' · '}
+            <Link href="/studio" className="text-[#facc15] hover:text-[#fde047] transition-colors">Explore the studio</Link>
+            {' · '}
+            <Link href="/personal-training-prices" className="text-[#facc15] hover:text-[#fde047] transition-colors">See pricing</Link>
+          </p>
         </div>
       </section>
     </AnimateIn>
