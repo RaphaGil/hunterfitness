@@ -108,8 +108,8 @@ const openingHoursSpecification = [
   {
     "@type": "OpeningHoursSpecification",
     dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-    opens: "06:00",
-    closes: "22:00",
+    opens: "07:00",
+    closes: "19:30",
   },
 
 ];
@@ -135,7 +135,7 @@ const jsonLdSchemas = [
     ],
     logo: `${siteUrl}/images/hunterfitnesslogo.png`,
     telephone: "+442012345678",
-    email: "hello@hunterfitness.com",
+    email: "matt@hunterfitness.com",
     address,
     geo,
     openingHoursSpecification,
