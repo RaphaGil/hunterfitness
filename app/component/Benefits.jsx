@@ -24,10 +24,7 @@ const benefits = [
     text: 'Private, well equipped training space',
     icon: 'lock',
   },
-  {
-    text: 'Luxurious changing facilities',
-    icon: 'sparkle',
-  },
+  
   {
     text: 'Fun & encouraging sessions',
     icon: 'smile',

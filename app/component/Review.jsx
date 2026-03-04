@@ -3,6 +3,8 @@
 import { useState, useEffect } from 'react';
 import AnimateIn from './AnimateIn';
 
+const MOBILE_BREAKPOINT = 768;
+
 const reviews = [
   {
     quote: 'I have been training with Matt for over two years. I had not done any serious exercise for over twenty years and, at first, was reluctant to start. I now see Matt twice a week and over the two years I have managed to lose over two stone in weight which was not a particular goal but has happened as a bi-product of the new exercise regime. I now see myself as reasonably fit and for more supple than I ever was. I certainly have far more energy and sleep really well. Matt is very professional yet personable and tailors the sessions to individual needs. I would highly recommend him to anyone who exercises and needs help or encouragement or a complete beginner',
@@ -32,28 +34,34 @@ const reviews = [
 ];
 
 const ROTATE_INTERVAL_MS = 7000;
-const REVIEWS_PER_PAGE = 2;
-const pageCount = Math.ceil(reviews.length / REVIEWS_PER_PAGE);
 
-function getReviewIndices(pageIndex) {
-  const start = pageIndex * REVIEWS_PER_PAGE;
-  return [
-    reviews[start],
-    reviews[(start + 1) % reviews.length],
-  ];
+function getDisplayedReviews(reviews, pageIndex, perPage) {
+  const start = pageIndex * perPage;
+  return Array.from({ length: perPage }, (_, i) => reviews[(start + i) % reviews.length]);
 }
 
 export default function Review() {
   const [activePage, setActivePage] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < MOBILE_BREAKPOINT);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
+
+  const perPage = isMobile ? 1 : 2;
+  const pageCount = Math.ceil(reviews.length / perPage);
 
   useEffect(() => {
     const id = setInterval(() => {
       setActivePage((p) => (p + 1) % pageCount);
     }, ROTATE_INTERVAL_MS);
     return () => clearInterval(id);
-  }, []);
+  }, [pageCount]);
 
-  const displayedReviews = getReviewIndices(activePage);
+  const displayedReviews = getDisplayedReviews(reviews, activePage, perPage);
 
   return (
     <AnimateIn>
@@ -68,7 +76,7 @@ export default function Review() {
             </p>
           </header>
 
-          {/* Two reviews at a time, auto-rotating */}
+          {/* One review on mobile, two on desktop; auto-rotating */}
           <div className="animate-on-scroll">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
               {displayedReviews.map((review, i) => (

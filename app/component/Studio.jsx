@@ -17,7 +17,6 @@ const facilities = [
   { name: 'Cross trainer', icon: 'heart' },
   { name: 'Stepper', icon: 'stepper' },
   { name: 'Functional training space', icon: 'space' },
-  { name: 'Cardio equipment', icon: 'heart' },
   { name: 'Wi-Fi', icon: 'wifi' },
   { name: 'Lockers', icon: 'locker' },
   { name: 'Hair dryers', icon: 'hairdryer' },
