@@ -115,6 +115,20 @@ const openingHoursSpecification = [
 ];
 
 const jsonLdSchemas = [
+  // Organization schema - used by Google for logo in search results
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${siteUrl}/#organization`,
+    name: "Hunter Fitness",
+    url: siteUrl,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/images/logo.png`,
+      width: 250,
+      height: 84,
+    },
+  },
   // LocalBusiness schema
   {
     "@context": "https://schema.org",
