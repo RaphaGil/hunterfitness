@@ -32,7 +32,7 @@ export default function PersonalTrainerBadge() {
         </defs>
         <text fill="white" fontFamily="system-ui, sans-serif" fontSize="8" fontWeight="600" letterSpacing="0.15em">
           <textPath href="#circlePath" startOffset="0">
-            PERSONAL TRAINER • PERSONAL TRAINER • PERSONAL TRAINER •
+            PERSONAL TRAINER • PERSONAL TRAINER •
           </textPath>
         </text>
       </svg>
