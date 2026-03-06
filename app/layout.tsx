@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://hunterfitness.co.uk";
+const siteUrl = "https://www.hunterfitness.co.uk";
 
 const siteImages = [
   { url: `${siteUrl}/images/12.jpeg`, width: 1200, height: 630, alt: "Hunter Fitness personal training - Matthew Hunter at Liverpool Street studio" },
@@ -124,7 +124,7 @@ const jsonLdSchemas = [
     url: siteUrl,
     logo: {
       "@type": "ImageObject",
-      url: `${siteUrl}/images/logo.png`,
+      url: `${siteUrl}/images/hunterfitnesslogo.png`,
       width: 250,
       height: 84,
     },

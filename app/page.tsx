@@ -15,7 +15,7 @@ import Footer from '@/component/Footer';
 import PersonalTrainerBadge from '@/component/PersonalTrainerBadge';
 import type { Metadata } from 'next';
 
-const siteUrl = 'https://hunterfitness.co.uk';
+const siteUrl = 'https://www.hunterfitness.co.uk';
 
 const defaultImage = {
   url: `${siteUrl}/images/12.jpeg`,

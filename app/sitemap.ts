@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = "https://hunterfitness.co.uk";
+const baseUrl = "https://www.hunterfitness.co.uk";
 
 const siteImages = [
   `${baseUrl}/images/12.jpeg`,

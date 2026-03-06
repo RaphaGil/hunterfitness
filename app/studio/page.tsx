@@ -4,7 +4,7 @@ import Footer from '@/component/Footer';
 import PersonalTrainerBadge from '@/component/PersonalTrainerBadge';
 import type { Metadata } from 'next';
 
-const siteUrl = 'https://hunterfitness.co.uk';
+const siteUrl = 'https://www.hunterfitness.co.uk';
 
 export const metadata: Metadata = {
   title: 'Studio',
