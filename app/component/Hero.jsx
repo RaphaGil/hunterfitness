@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 
 const goals = ['Improving Health', 'Feeling Better', 'Gaining Strength', 'Losing Weight', 'Increasing Flexibility', 'Building Muscle', 'Injury Prevention'];
@@ -40,26 +41,19 @@ export default function Hero() {
   }, [currentGoal]);
 
   return (
-    <section className="relative w-full min-h-screen flex flex-col" aria-label="Hero">
-      {/* Mobile: normal scrolling background, centered */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat md:hidden"
-        style={{
-          backgroundImage: 'url(/images/7.jpg)',
-          backgroundPosition: 'center center',
-          backgroundSize: 'cover',
-        }}
-        aria-hidden
-      />
-      {/* Desktop: fixed background */}
-      <div
-        className="absolute inset-0 hidden bg-cover bg-center md:block"
-        style={{
-          backgroundImage: 'url(/images/7.jpg)',
-          backgroundAttachment: 'fixed',
-        }}
-        aria-hidden
-      />
+    <section className="relative w-full min-h-screen flex flex-col overflow-hidden" aria-label="Hero">
+      {/* Responsive hero image - optimized via Next.js Image, contained to hero section */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/7.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-center"
+          priority
+          aria-hidden
+        />
+      </div>
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 flex flex-1 flex-col justify-center px-6 pt-20 pb-24 md:px-12">

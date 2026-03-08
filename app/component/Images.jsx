@@ -17,7 +17,7 @@ export default function Images() {
             className="object-cover"
           />
         </div>
-        {/* Center – single image on mobile (fixed bg broken on small screens), parallax on desktop */}
+        {/* Center – responsive Image (optimized via Next.js) */}
         <div className="relative w-full h-full min-h-[200px] md:min-h-[320px]">
           <Image
             src="/images/2.jpg"
@@ -26,12 +26,12 @@ export default function Images() {
             sizes="(max-width: 768px) 100vw, 34vw"
             className="object-cover md:hidden"
           />
-          <div
-            className="hidden md:block absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: 'url(/images/12.jpeg)',
-              backgroundAttachment: 'fixed',
-            }}
+          <Image
+            src="/images/12.jpeg"
+            alt="Hunter Fitness personal training at Liverpool Street studio"
+            fill
+            sizes="(max-width: 768px) 0, 34vw"
+            className="object-cover object-center hidden md:block"
             aria-hidden
           />
         </div>

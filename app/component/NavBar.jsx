@@ -42,9 +42,10 @@ export default function NavBar() {
         <Link href="/" className="shrink-0" aria-label="Hunter Fitness home">
           <Image
             src="/images/hunterfitnesslogo.png"
-            alt=""
+            alt="Hunter Fitness"
             width={250}
             height={84}
+            sizes="(max-width: 768px) 140px, 250px"
             className="object-contain h-16 md:h-16 w-auto"
             priority
           />
