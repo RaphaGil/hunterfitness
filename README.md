@@ -6,6 +6,35 @@ Personal trainer website for Matthew Hunter — Liverpool Street, London.
 
 ---
 
+## SEO
+
+The site is built with SEO in mind. Implemented work includes:
+
+### Metadata
+- **Root layout** (`app/layout.tsx`): `metadataBase`, title template (`%s | Hunter Fitness`), meta description, keywords, authors, creator, publisher
+- **Per-page metadata**: Each route exports its own `title`, `description`, `openGraph`, and `twitter` metadata
+- **Open Graph**: Images with dimensions and alt text, locale `en_GB`, site name
+- **Twitter Cards**: `summary_large_image` with title, description, and images
+- **Robots**: `index: true`, `follow: true` for Google and other crawlers
+- **Canonical URLs**: `alternates.canonical` for the homepage
+- **Geo**: `geo.region: GB-LND` for local targeting
+
+### Sitemap & Crawlers
+- **Dynamic sitemap** (`app/sitemap.ts`): XML sitemap with all pages, `lastModified`, `changeFrequency`, `priority`, and image URLs
+- **robots.txt** (`app/robots.ts`): Allows all user agents, disallows `/api/`, references sitemap URL
+
+### Structured Data (JSON-LD)
+- **Organization**: Logo, name, URL for search branding
+- **LocalBusiness**: Address, geo, opening hours, telephone, email, images, services, offer catalog, aggregate ratings, reviews
+- **Person**: Matthew Hunter profile (job title, skills, works for)
+- **Service**: Offer catalog for all training services
+- **FAQPage**: FAQ schema for rich results in search
+
+### Pages
+- Home, Personal Training Services, Personal Training Prices, About, Studio, Benefits, FAQ, Contact
+
+---
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
