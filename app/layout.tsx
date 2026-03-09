@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Hunter Fitness",
     title: "Personal Training - Liverpool Street",
     description:
-      "Private City studio, 1 min from Liverpool St. Expert 1-on-1 PT. Free consult. Private personal training in the City. Studio near Bank & Moorgate. Private 1-on-1 Studio. Free First Consultation. Expert guidance to achieve your health and fitness goals. Book your free consultation today.",
+      "Private City studio, 1 min from Liverpool St. Expert 1-on-1 PT. Free consult. Private personal training in the City. Prices from £55 per session. Since 2013. Private 1-on-1 Studio. Free First Consultation. Expert guidance to achieve your health and fitness goals. Book your free consultation today.",
     images: siteImages,
   },
   twitter: {

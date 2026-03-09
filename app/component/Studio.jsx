@@ -159,13 +159,13 @@ export default function Studio() {
            
           </div>
 
-          {/* Location + Facilities grid */}
-          <div className="grid md:grid-cols-5 gap-8 lg:gap-10 animate-on-scroll animate-on-scroll-delay-1">
-            {/* Location card - spans 2 cols */}
-            <div className="md:col-span-2">
-              <div className="rounded-lg border border-stone-700/80 bg-stone-900/60 p-6 md:p-8 h-full flex flex-col hover:border-[#facc15]/30 transition-colors duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-lg bg-[#facc15]/10 text-[#facc15]" aria-hidden>
+          {/* Location + Facilities grid - stacked on mobile/tablet, side-by-side on desktop */}
+          <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-5 gap-6 md:gap-8 lg:gap-10 animate-on-scroll animate-on-scroll-delay-1">
+            {/* Location card - full width on tablet, 2 cols on desktop */}
+            <div className="lg:col-span-2">
+              <div className="rounded-lg border border-stone-700/80 bg-stone-900/60 p-5 sm:p-6 md:p-7 lg:p-8 h-full flex flex-col hover:border-[#facc15]/30 transition-colors duration-300">
+                <div className="flex items-center gap-3 mb-3 md:mb-4">
+                  <span className="flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-[#facc15]/10 text-[#facc15] shrink-0" aria-hidden>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
                       <circle cx="12" cy="10" r="3" />
@@ -173,10 +173,10 @@ export default function Studio() {
                   </span>
                   <h3 className="text-sm font-semibold tracking-widest text-[#facc15] uppercase">Location</h3>
                 </div>
-                <p className="text-white text-lg md:text-xl font-medium leading-snug mb-4">
+                <p className="text-white text-base sm:text-lg md:text-xl font-medium leading-snug mb-3 md:mb-4">
                    40 Liverpool Street · London EC2M 7QN
                 </p>
-                <div className="mt-auto flex flex-wrap gap-4">
+                <div className="mt-auto flex flex-row flex-wrap gap-8 sm:gap-4">
                 <a
                   href={MAPS_URL}
                   target="_blank"
@@ -195,14 +195,14 @@ export default function Studio() {
               </div>
             </div>
 
-            {/* Facilities - spans 3 cols */}
-            <div className="md:col-span-3">
-              <h3 className="text-sm font-semibold tracking-widest text-[#facc15] uppercase mb-5">Facilities</h3>
-              <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+            {/* Facilities - full width on tablet, 3 cols on desktop */}
+            <div className="lg:col-span-3">
+              <h3 className="text-sm font-semibold tracking-widest text-[#facc15] uppercase mb-4 md:mb-5">Facilities</h3>
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
                 {facilities.map((item) => (
                   <div
                     key={item.name}
-                    className="flex items-start gap-2 sm:gap-4 rounded-lg border border-stone-700/60 bg-stone-900/40 px-3 py-3 sm:px-4 sm:py-4 hover:border-stone-600 hover:bg-stone-900/60 transition-colors duration-300 min-w-0"
+                    className="flex items-start gap-2 sm:gap-3 md:gap-4 rounded-lg border border-stone-700/60 bg-stone-900/40 px-3 py-3 sm:px-4 sm:py-4 md:px-4 md:py-4 hover:border-stone-600 hover:bg-stone-900/60 transition-colors duration-300 min-w-0"
                   >
                     <span className="flex items-center justify-center w-8 h-8 sm:w-9 sm:h-9 rounded-md bg-[#facc15]/10 text-[#facc15] shrink-0 mt-0.5" aria-hidden>
                       <FacilityIcon type={item.icon} />
